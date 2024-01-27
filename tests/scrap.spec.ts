@@ -2,7 +2,7 @@ import test from "@playwright/test"
 test (`Using Keyboard action`,async({page})=>{
 
    await page.goto("https://platform.testleaf.com/#/")
-   await page.waitForTimeout(3000)
+   await page.waitForTimeout(30000)
    
    
 })
