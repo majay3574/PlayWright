@@ -1,0 +1,19 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.11.0"
+  },
+  "dependencies": {
+    "env": "^0.0.2",
+    "env-cmd": "^10.1.0",
+    "typescript": "^5.3.3"
+  }
+}
