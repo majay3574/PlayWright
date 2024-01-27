@@ -4,3 +4,4 @@ const value = 'SGVsbG8hIFlvdSBoYXZlIHN1Y2Nlc3NmdWxseSBkZWNvZGVkIHRoaXMgYmFzZTY0I
 const decoded = Buffer.from(value, 'base64').toString('utf-8');
 
 console.log(decoded);
+let named=""
