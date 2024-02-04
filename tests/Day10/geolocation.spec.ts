@@ -1,12 +1,15 @@
 import { test, expect } from '@playwright/test';
 
 test.use({
-  geolocation: { longitude: 41.890221, latitude: 12.492348 },
+  geolocation: { longitude: -100.000000, latitude: 31.000000 },
   permissions: ['geolocation'],
 });
 
 test('my test with geolocation', async ({ page, context }) => {
   
-  await context.setGeolocation({ longitude: 48.858455, latitude: 2.294474 });
+  await page.goto("https://www.google.com/maps")
+  await page.waitForLoadState('domcontentloaded')
+  await page.click('button[aria-label="Your Location"]>div')
+  await page.waitForTimeout(10000)
 });
 
