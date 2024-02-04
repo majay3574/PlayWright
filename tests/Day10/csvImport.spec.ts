@@ -10,7 +10,7 @@ import fs from 'fs';
 // it provides utilities for working with file and directory paths
 import path from 'path';
  // Updated import path for csv-parse
-// Read the CSV file and parse its contents into records
+ // Read the CSV file and parse its contents into records
      // const csvFilePath = path.join(__dirname, './Data/csvDAta.csv');
      // const csvData = fs.readFileSync(csvFilePath, 'utf8');
 const records = parse(fs.readFileSync(path.join(__dirname, './Data/csvDAta.csv')), {
