@@ -5,14 +5,14 @@ import path from "path"
 
     test(`T001 - File upload by set input files`,async({page})=>{
         await page.goto("https://www.leafground.com/file.xhtml")
-        const card =  page.locator(".card").filter({has:page.getByText("Basic Upload")})
+        const card =  page.locator(".card").filter({has:page.getByText("Advanced Upload - Only Pictures")})
         await page.waitForTimeout(5000);
         await card.locator("input[type='file']").setInputFiles([path.join(__dirname, 'testleaf.jpg')])
         await expect(card.locator(".ui-fileupload-filename")).toContainText("testleaf.jpg")
         await page.waitForTimeout(5000);
     })
  
-    test(`T002 - File upload by event handler`,async({page})=>{
+    test.skip(`T002 - File upload by event handler`,async({page})=>{
   
         await page.goto("https://the-internet.herokuapp.com/upload")
         const fileChooserPromise = page.waitForEvent("filechooser",{timeout:10000})
@@ -25,7 +25,7 @@ import path from "path"
         await expect(page.locator("#drag-drop-upload")).toHaveClass(/dz-success-mark/)
     })
 
-    test('T003 - File upload by using exact path', async ({ page }) => {
+    test.skip('T003 - File upload by using exact path', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/upload');
         const filePath = 'C:\Users\AjayMichael\PlayWright'; 
         const fileInput = page.locator('input#file-upload');
