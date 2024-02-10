@@ -1,6 +1,6 @@
 import { expect, request, test } from "@playwright/test";
 import multi from "./Data/multidata.json"
-
+import account from "./Data/account.json"
 let accessToken: any
 let inst_url: any
 
@@ -36,9 +36,9 @@ test('Get Access token from Salesforce', async ({ request }) => {
 })
 
 multi.forEach(element => {
-    test(`deleting opportunity with id ${element.id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity/"+element.id;
-console.log(oppurl)
+    test.skip(`deleting opportunity with id ${element.id}`, async ({ request }) => {
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity/" + element.id;
+        console.log(oppurl)
         let deleteTheOpportunity = await request.delete(oppurl, {
             headers: {
                 "Content-Type": "application/json",
@@ -49,8 +49,8 @@ console.log(oppurl)
         });
 
         let getResponse = deleteTheOpportunity.status();
+        console.log(getResponse)
 
-        
     });
 });
 
@@ -68,6 +68,24 @@ test.skip(`deleting opportunity with id`, async ({ request }) => {
 
     let getResponse = deleteTheOpportunity.status();
     console.log(getResponse)
-    expect(getResponse).toBe(204); 
+    expect(getResponse).toBe(204);
 });
 
+account.forEach(accounts => {
+    test(`deleting opportunity with id ${accounts.id}`, async ({ request }) => {
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account/" + accounts.id;
+        console.log(oppurl)
+        let deleteTheAccounts = await request.delete(oppurl, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Connection": "keep-alive",
+                "Authorization": `Bearer ${accessToken}`
+            }
+        });
+
+        let getResponse = deleteTheAccounts.status();
+        console.log(getResponse)
+
+    });
+});
