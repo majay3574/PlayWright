@@ -6,7 +6,7 @@ let inst_url: any
 let account_id:any
  
  
-    test(`Creating a new dashboard`, async ({ page }) => {
+    test.skip(`Creating a new dashboard`, async ({ page }) => {
  
         await page.goto("https://login.salesforce.com");
         await page.fill("#username", 'majay3574@gmail.com');
@@ -37,7 +37,7 @@ let account_id:any
         const dashboardFrame = page.frameLocator("[title='dashboard']");
         
         //Fill in the input field *** Name ***
-        await dashboardFrame.locator("#dashboardNameInput").fill("Michael Clarke");
+        await dashboardFrame.locator("#dashboardNameInput").fill("Ajay Michael");
  
         //Fill in the input field  *** Description ***
         await dashboardFrame.locator("#dashboardDescriptionInput").fill("Filling with some text in description");
@@ -58,7 +58,7 @@ let account_id:any
  
  
  
-test.skip('Get Access token from Salesforce', async ({ request }) => {
+test('Get Access token from Salesforce', async ({ request }) => {
  
  
     const url = "https://login.salesforce.com/services/oauth2/token";
@@ -88,7 +88,7 @@ test.skip('Get Access token from Salesforce', async ({ request }) => {
     console.log(inst_url)
 });
  
-test.skip(`get the account from dashboard`,async({request})=>{
+test(`get the account from dashboard`,async({request})=>{
  
  
 let get_url=`${inst_url}/services/data/v36.0/sobjects/Dashboard/`
