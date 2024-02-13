@@ -6,7 +6,7 @@ let inst_url: any
 let account_id:any
  
  
-    test.skip(`Creating a new dashboard`, async ({ page }) => {
+    test(`Creating a new dashboard`, async ({ page }) => {
  
         await page.goto("https://login.salesforce.com");
         await page.fill("#username", 'majay3574@gmail.com');
@@ -58,36 +58,40 @@ let account_id:any
  
  
  
-test('Get Access token from Salesforce', async ({ request }) => {
- 
- 
-    const url = "https://login.salesforce.com/services/oauth2/token";
- 
-    const formdata = new URLSearchParams();
-    formdata.append('grant_type', 'password');
-    formdata.append('client_id', '3MVG9fe4g9fhX0E5hbGhek7Fp9ijXU30Q2eWnfUpEFvJ1mkEJCNcHmE01luXmSbgA73HgGRy5Ouj3c1IE2SLZ');
-    formdata.append('client_secret', '0184AC8597512459A6BF96E1F46CB699EAEA1CEC34212BDDF383F28F99CCB376');
-    formdata.append('username', 'majay3574@gmail.com');
-    formdata.append('password', 'Ajaymichael@007');
- 
-    const generatingToken = await request.post(url, {
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Connection": "keep-alive",
-        },
-        data: formdata.toString(),
+    test('Get Access token from Salesforce', async ({ request }) => {
+
+        const clientId = '3MVG9fe4g9fhX0E5hbGhek7Fp9ijXU30Q2eWnfUpEFvJ1mkEJCNcHmE01luXmSbgA73HgGRy5Ouj3c1IE2SLZ';
+        const clientSecret = '0184AC8597512459A6BF96E1F46CB699EAEA1CEC34212BDDF383F28F99CCB376';
+        const username = 'majay3574@gmail.com';
+        const password = 'Ajaymichael@007';
+    
+    
+        const url = "https://login.salesforce.com/services/oauth2/token";
+    
+        const generatingToken = await request.post(url, {
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Connection": "keep-alive",
+            },
+            form: {
+                grant_type: 'password',
+                client_id: clientId,
+                client_secret: clientSecret,
+                username: username,
+                password: password
+            },
+        });
+    
+    
+    
+        const generatingTokenJSON = await generatingToken.json()
+        console.log(generatingTokenJSON)
+        accessToken = generatingTokenJSON.access_token
+        inst_url = generatingTokenJSON.instance_url
+        console.log("Bearer " + accessToken)
+        console.log(inst_url)
     });
- 
- 
- 
-    const generatingTokenJSON = await generatingToken.json()
-    console.log(generatingTokenJSON)
-    accessToken = generatingTokenJSON.access_token
-    inst_url = generatingTokenJSON.instance_url
-    console.log("Bearer " + accessToken)
-    console.log(inst_url)
-});
- 
+
 test(`get the account from dashboard`,async({request})=>{
  
  
@@ -107,7 +111,7 @@ let get_dasboard= await request.get(get_url,{
 })
  
  
-test.skip(`Delete the account from dashboard`,async({request})=>{
+test(`Delete the account from dashboard`,async({request})=>{
  
  
     let delete_url=`${inst_url}/services/data/v36.0/sobjects/Dashboard/${account_id}`
