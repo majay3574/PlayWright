@@ -12,7 +12,7 @@
         Call the navigate method of the DashboardPage instance. */
 
         import { chromium, Page } from 'playwright';
-
+        
         class DashboardPage {
             public page: Page;
             public url: string;

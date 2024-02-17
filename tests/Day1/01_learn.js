@@ -28,3 +28,6 @@ console.log(typeof isAutomation)
 
 let hasPlaywright;
 console.log(typeof hasPlaywright)
+
+let number = 0o464
+console.log(number)
