@@ -15,7 +15,7 @@ Call that function from the javascript
 Time: 15 Minutes */
 
 function launchBrowser(browserName) {
-    if (browserName.toLowerCase() === 'chrome') {
+    if (browserName === 'chrome') {
         console.log('Launching Chrome browser');
     } else {
         console.log('Launching browser other than Chrome');
