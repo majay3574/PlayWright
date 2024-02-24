@@ -20,9 +20,10 @@ test(`handling drodown`, async ({ page }) => {
     const dd = source_dropdown.locator("option")
     let val = await dd.count();
 
-for (let index = 0; index < val; index++) {
+for (let i = 0; i < val; i++) {
     
-    console.log(await dd.nth(index).innerText())
+    console.log(await dd.nth(i).innerText())
+    await source_dropdown.selectOption({index:i})
 }
 
 })
