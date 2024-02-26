@@ -17,8 +17,8 @@ function reverse(fname) {
 reverse("Ajay Michael"); // Output: "yaJ"
 
 
-// let fnamed = fname.split('').reverse().join('');
-// console.log(fnamed);
+let fnamed = fname.split('').reverse().join('');
+console.log(fnamed);
 
 
 /* 
