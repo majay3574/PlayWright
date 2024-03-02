@@ -22,13 +22,11 @@ function invokeBrowser(browserName:supportedBrowsers):void{
 
 
             console.log("Launch Chrome Browser");
-            
+
         }
         else{
-
-
-            console.log("Launch Firefox");
             
+            console.log("Launch Firefox");      
         }
 
 

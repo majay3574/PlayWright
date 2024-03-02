@@ -1,19 +1,19 @@
-let num = [1, 2, 3, 4, 3];
-let unique = [];
+// let num = [1, 2, 3, 4, 3];
+// let unique = [];
 
-for (let i = 0; i < num.length; i++) {
-    let j = 0;
-    for (j = 0; j < unique.length; j++) {
-        if (num[i] === unique[j]) {
-            break;
-        }
-    }
-    if (j === unique.length) {
-        unique.push(num[i]);
-    }
-}
+// for (let i = 0; i < num.length; i++) {
+//     let j = 0;
+//     for (j = 0; j < unique.length; j++) {
+//         if (num[i] === unique[j]) {
+//             break;
+//         }
+//     }
+//     if (j === unique.length) {
+//         unique.push(num[i]);
+//     }
+// }
 
-console.log(unique);
+// console.log(unique);
 
 
 
