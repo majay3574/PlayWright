@@ -19,17 +19,11 @@ type supportedBrowsers = "Chrome"|"Firefox";
 //function funcName(parameter:type)
 function invokeBrowser(browserName:supportedBrowsers):void{
         if(browserName === 'Chrome'){
-
-
             console.log("Launch Chrome Browser");
-
         }
-        else{
-            
+        else{   
             console.log("Launch Firefox");      
         }
-
-
 }
 invokeBrowser("Chrome")
 
