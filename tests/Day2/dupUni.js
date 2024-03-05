@@ -21,7 +21,7 @@
 
 function duplicate (numbers){
     numbers.sort()
-    let uniqueArray = [...new Set(numbers)];
+    let uniqueArray = [...new list(numbers)];
     console.log(uniqueArray);
 }
 let nums = [1, 2, 3, 4, 3];
