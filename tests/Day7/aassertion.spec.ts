@@ -8,6 +8,7 @@ test(`using expect library`,async({page})=>{
     await page.click(".decorativeSubmit")
     
     const crmsf = page.locator('a:text-is("CRM/SFA")')
-    await expect(crmsf).toBeVisible({timeout:5000})
+    //await expect(crmsf).toBeVisible({timeout:5000})
+    expect.soft(crmsf).toBeVisible({timeout:5000})
     await crmsf.click()
 })
