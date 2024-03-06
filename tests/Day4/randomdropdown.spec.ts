@@ -5,6 +5,7 @@ test(`handling drodown`, async ({ page }) => {
     await page.goto("http://leaftaps.com/opentaps/control/main")
     await page.fill("#username", 'DemoSalesManager')
     await page.fill("#password", 'crmsfa')
+    
     await page.click(".decorativeSubmit")
     await page.click("a:has-text('CRM/SFA')")
 
@@ -29,7 +30,7 @@ test(`handling drodown`, async ({ page }) => {
 
     const industry_dropdown= page.locator("#createLeadForm_industryEnumId")
     await  industry_dropdown.selectOption({value:"IND_HARDWARE"})
-    await page.locator(".smallSubmit").click();
+    await page.locator(".smallSubmit").click({timeout:5000});
     await page.waitForTimeout(3000);
 
 })
