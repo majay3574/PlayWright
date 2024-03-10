@@ -1,5 +1,5 @@
-const dame = {name:"alice"}
-const alias = dame
+const common = {name:"alice"}
+const alias = common
 alias.name='ajay'
-const result= dame.name
+const result= common.name
 console.log(result)

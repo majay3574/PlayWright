@@ -5,6 +5,7 @@ await page.goto("https://www.leafground.com/window.xhtml;")
 const windowPromise = context.waitForEvent("page")
 await page.getByText("Open",{exact:true}).click()
 const window = await windowPromise
+console.log(windowPromise)
 await expect(window).toHaveURL("https://www.leafground.com/dashboard.xhtml")
  
 await window.bringToFront()

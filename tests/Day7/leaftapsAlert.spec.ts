@@ -15,5 +15,12 @@ test(`handling alert`,async({page})=>{
 
     const promptalert = page.locator(".card").filter({hasText:" Alert (Prompt Dialog)"})
     await promptalert.locator("span:text-is('Show')").click({force:true})
+    await page.waitForTimeout(2000)
+    const confirmAlert = page.locator(".card").filter({hasText:" Alert (Confirm Dialog)"})
+    await confirmAlert.locator("span:text-is('Show')").click({force:true})
+await page.waitForTimeout(2000)
+    const SimpleDialog = page.locator(".card").filter({hasText:" Alert (Simple Dialog)"})
+    await SimpleDialog.locator("span:text-is('Show')").nth(0).click({force:true})
+
 
 })

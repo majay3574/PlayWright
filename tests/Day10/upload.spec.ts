@@ -12,7 +12,7 @@ import path from "path"
         await page.waitForTimeout(5000);
     })
  
-    test.skip(`T002 - File upload by event handler`,async({page})=>{
+    test(`T002 - File upload by event handler`,async({page})=>{
   
         await page.goto("https://the-internet.herokuapp.com/upload")
         const fileChooserPromise = page.waitForEvent("filechooser",{timeout:10000})
@@ -25,7 +25,10 @@ import path from "path"
         await expect(page.locator("#drag-drop-upload")).toHaveClass(/dz-success-mark/)
     })
 
-    test.skip('T003 - File upload by using exact path', async ({ page }) => {
+
+
+
+    test('T003 - File upload by using exact path', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/upload');
         const filePath = 'C:\Users\AjayMichael\PlayWright'; 
         const fileInput = page.locator('input#file-upload');
