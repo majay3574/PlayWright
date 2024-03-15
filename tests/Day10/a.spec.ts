@@ -9,7 +9,7 @@ const records = parse(fs.readFileSync(path.join(__dirname, './Data/csvData.csv')
     skip_empty_lines: true
 });
 
-records.forEach((a) => {
+records.forEach((a:any) => {
     test(`Login with ${a.username}`, async ({ page }) => {
         await page.goto("https://login.salesforce.com/");
         await page.fill('input[name="username"]', a.username);

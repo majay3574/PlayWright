@@ -1,9 +1,10 @@
-[{
-  "username":"majay3574@gmail.com",
-  "password":"Ajaymichael@007"
-},
-{
-  "username":"ranjini.r@testleaf.com",
-  "password":"Testleaf@1234"
-}
+[
+  {
+    "username": "majay3574@gmail.com",
+    "password": "Ajaymichael@007"
+  },
+  {
+    "username": "ranjini.r@testleaf.com",
+    "password": "Testleaf@1234"
+  }
 ]

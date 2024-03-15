@@ -3,10 +3,12 @@ import login from "./login.spec";
 import credentials from "./Data/usercerdintial.json"
 
 
-test(`Create Task in leaftab`, async ({ page }) => {
-    
-    await login(page,credentials.un,credentials.pw);
 
+
+test(`Create Task in leaftab`, async ({ page }) => {
+
+    await login(page,credentials.un,credentials.pw);
+    
     const search_parent = page.locator("div[class^='slds-form-element__control slds-grow']");
     await search_parent.locator("input[type='search']").fill("Tasks");
  

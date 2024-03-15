@@ -1,8 +1,8 @@
+import fs from "fs"
 import { expect, request, test } from "@playwright/test";
-import multi from "./Data/multidata.json"
-import account from "./Data/account.json"
 let accessToken: any
 let inst_url: any
+import data from "./data.json"
 
 test('Get Access token from Salesforce', async ({ request }) => {
 
@@ -35,43 +35,7 @@ test('Get Access token from Salesforce', async ({ request }) => {
     console.log(inst_url)
 })
 
-multi.forEach(element => {
-    test.skip(`deleting opportunity with id ${element.id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity/" + element.id;
-        console.log(oppurl)
-        let deleteTheOpportunity = await request.delete(oppurl, {
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                "Connection": "keep-alive",
-                "Authorization": `Bearer ${accessToken}`
-            }
-        });
-
-        let getResponse = deleteTheOpportunity.status();
-        console.log(getResponse)
-
-    });
-});
-
-test.skip(`deleting opportunity with id`, async ({ request }) => {
-    const oppurl = `${inst_url}/services/data/v36.0/sobjects/Opportunity/0065g00000cEbqXAAS`;
-
-    let deleteTheOpportunity = await request.delete(oppurl, {
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-            "Connection": "keep-alive",
-            "Authorization": `Bearer ${accessToken}`
-        }
-    });
-
-    let getResponse = deleteTheOpportunity.status();
-    console.log(getResponse)
-    expect(getResponse).toBe(204);
-});
-
-test(`getting account VAlue `, async ({request}) => {
+test(`getting account VAlue `, async ({ request }) => {
     const opppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account"
     let gettheAccounts = await request.get(opppurl, {
         headers: {
@@ -81,23 +45,32 @@ test(`getting account VAlue `, async ({request}) => {
             "Authorization": `Bearer ${accessToken}`
         }
     })
+    let AccountResponse: any = await gettheAccounts.json(); 
+    console.log(AccountResponse);
 
-let AccountResponse= gettheAccounts.json()
-console.log(AccountResponse)
-// for(let i=0;i<18;i++){
-// let gottenId:any= AccountResponse.recentItems[i].Id;
-// let idArray = []; 
-// idArray.push(gottenId); 
-// console.log(idArray); 
-//}
+    let idArray: string[] = [];
+    
+    for (let i = 0; i < AccountResponse.recentItems.length; i++) {
+        idArray.push(AccountResponse.recentItems[i].Id);
+    }
+console.log(idArray)
+    let formattedIds: { Id: string }[] = [];
 
+    for (let i = 0; i < idArray.length; i++) {
+        formattedIds.push({ Id: idArray[i] });
+    }
+console.log(formattedIds)
+    // const jsonData = JSON.stringify(formattedIds);
+    // console.log(jsonData);
+    fs.writeFileSync('data.json', JSON.stringify(formattedIds));
+    
 
 
 })
 
-account.forEach(accounts => {
-    test.skip(`deleting opportunity with id ${accounts.id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account/" + accounts.id;
+data.forEach(accounts => {
+    test(`deleting opportunity with id ${accounts.Id}`, async ({ request }) => {
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account/" + accounts.Id;
         console.log(oppurl)
         let deleteTheAccounts = await request.delete(oppurl, {
             headers: {
@@ -112,4 +85,4 @@ account.forEach(accounts => {
         console.log(getResponse)
 
     });
-});
+})
