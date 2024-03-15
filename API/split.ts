@@ -12,7 +12,7 @@ let a = [
     }
 ];
 
-let idArray: string[] = [];
+let idArray:string[] = [];
 
 for (let i = 0; i < a.length; i++) {
     idArray.push(a[i].Id);
