@@ -1,12 +1,12 @@
-const { createClient } = require('redis');
+const redis = require('redis');
+const client = redis.createClient();
 
+client.on('connect', function() {
+    console.log('Connected!');
+  });   
 
-const client = createClient();
+  client.set('Name', 'Ajay'); 
 
-client.on('error', err => console.log('Redis Client Error', err));
-
-await client.connect();
-
-await client.set('Car', 'Lambo');
-const value = await client.get('Car');
-await client.quit()
+  client.get('framework', function(err, reply) {
+    console.log(reply); // ReactJS
+  });
