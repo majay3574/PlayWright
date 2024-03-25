@@ -10,7 +10,7 @@ let account_id:any
  
         await page.goto("https://login.salesforce.com");
         await page.fill("#username", 'majay3574@gmail.com');
-        await page.fill("#password", 'Ajaymichael@007')
+        await page.fill("#password", 'Ajaymichael@8428')
         await page.click("#Login");
  
         //Open the App Launcher menu

@@ -10,7 +10,7 @@ test('Get Access token from Salesforce', async ({ request }) => {
     const clientId = '3MVG9fe4g9fhX0E5hbGhek7Fp9ijXU30Q2eWnfUpEFvJ1mkEJCNcHmE01luXmSbgA73HgGRy5Ouj3c1IE2SLZ';
     const clientSecret = '0184AC8597512459A6BF96E1F46CB699EAEA1CEC34212BDDF383F28F99CCB376';
     const username = 'majay3574@gmail.com';
-    const password = 'Ajaymichael@007';
+    const password = 'Ajaymichael@8428';
 
 
     const url = "https://login.salesforce.com/services/oauth2/token";

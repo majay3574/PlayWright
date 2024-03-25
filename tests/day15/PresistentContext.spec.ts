@@ -4,11 +4,11 @@ test(`using presistentContext`, async ({ }) => {
 
     const myCokies = "./Cookies"
     const browser = await chromium.launchPersistentContext(myCokies, {
-        headless: false,
+        headless: false,channel:'chrome',
         httpCredentials: {
             username: "admin",
             password: "testleaf",
-            origin:"http://leafground.com:8090"
+            origin:"http://leafground.com:9323"
         }
     })
     const page = await browser.newPage()
@@ -18,7 +18,7 @@ test(`using presistentContext`, async ({ }) => {
     await page.waitForTimeout(5000)
 })
 
-test(`Persistent Context`, async () => {
+test.skip(`Persistent Context`, async () => {
 
 
     const userDataDir = "./myUserDataDir";

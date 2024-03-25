@@ -13,7 +13,9 @@ test(`Launching Snapdeal and click the Quick view feature`,async({page})=>{
   await page.goto("https://www.snapdeal.com/")
   await page.waitForLoadState('load')
   await page.hover('span:text-is("Men\'s Fashion")') 
+  //await page.locator("span:text-is('Sports Shoes')").first().screenshot({ path: 'screenshot.png' });
   await page.click("span:text-is('Sports Shoes')")
+  
   const sportsShoes=await page.locator('//div[text()="Sports Shoes for Men"]/following-sibling::div').innerText()
 console.log(sportsShoes)
 
