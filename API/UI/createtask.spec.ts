@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import login from "./login.spec"; 
-import credentials from "./Data/usercerdintial.json"
+import credentials from "../../Salesforce/Data/usercerdintial.json"
 
 
 

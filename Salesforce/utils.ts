@@ -1,8 +1,8 @@
 import { Page, Browser } from 'playwright';
 
 export class utils {
-    protected page: Page;
-    protected browser: Browser;
+    public page: Page;
+    public browser: Browser;
 
     constructor(page: Page, browser: Browser) {
         this.page = page;
