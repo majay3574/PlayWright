@@ -1,24 +1,28 @@
 import test, { chromium } from "@playwright/test"
 
-test(`using presistentContext`, async ({ }) => {
+test.only(`using persistentContext`, async ({ }) => {
 
-    const myCokies = "./Cookies"
-    const browser = await chromium.launchPersistentContext(myCokies, {
+   // const userDataDir = "./myUserDataDir";
+    const browser = await chromium.launchPersistentContext("./myUserDataDir", {
         headless: false,channel:'chrome',
         httpCredentials: {
             username: "admin",
             password: "testleaf",
-            origin:"http://leafground.com:9323"
+            origin: "http://leafground.com:9323"
         }
-    })
-    const page = await browser.newPage()
-    await page.goto("https://leafground.com/auth.xhtml")
-    await page.click('span:text-is("Basic Auth")')
+    });
+    const page = await browser.newPage();
+    await page.goto("https://leafground.com/auth.xhtml");
 
-    await page.waitForTimeout(5000)
-})
+    // Wait for the 'Basic Auth' button to appear and then click it
+    await page.waitForSelector('span:has-text("Basic Auth")');
+    await page.click('span:has-text("Basic Auth")');
 
-test.skip(`Persistent Context`, async () => {
+    
+});
+
+
+test(`Persistent Context`, async () => {
 
 
     const userDataDir = "./myUserDataDir";
@@ -26,7 +30,7 @@ test.skip(`Persistent Context`, async () => {
 
     //Launch a persistent context
     const context = await chromium.launchPersistentContext(userDataDir, {
-        headless:false,
+        headless:false,channel:'msedge',
         httpCredentials:{
             username: "admin",
             password: "testleaf",

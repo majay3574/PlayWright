@@ -25,4 +25,5 @@ await firstShoe.hover();
 const QuickViewButton =page.locator("div[class='clearfix row-disc']").first()
 await QuickViewButton.filter({hasText:"Quick View"}).click()
 await page.screenshot({ path: 'expected.png' });
+//await page.locator('css=vercel-live-feedback').evaluate((iframe) => iframe.remove());
 })

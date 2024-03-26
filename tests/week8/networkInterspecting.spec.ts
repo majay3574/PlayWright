@@ -10,7 +10,9 @@ test.describe(`Intercepting the API`,async()=>{
                 console.log(request.url());
                 console.log(await request.allHeaders());
                 const response = await request.response();
+                // console.log(response)
                 const bodyContents = await response?.body();
+                console.log(bodyContents)
 
             } else{
 
