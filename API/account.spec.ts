@@ -1,5 +1,5 @@
 import fs from "fs"
-import { expect, request, test } from "@playwright/test";
+import { test } from "@playwright/test";
 let accessToken: any
 let inst_url: any
 import data from "./data.json"
@@ -59,7 +59,7 @@ console.log(idArray)
     for (let i = 0; i < idArray.length; i++) {
         formattedIds.push({ Id: idArray[i] });
     }
-console.log(formattedIds)
+    console.log(formattedIds)
     // const jsonData = JSON.stringify(formattedIds);
     // console.log(jsonData);
     fs.writeFileSync('data.json', JSON.stringify(formattedIds));

@@ -1,34 +1,35 @@
-import { Page, Browser } from 'playwright';
+import { Page } from 'playwright';
 
 export class utils {
+    readonly:utils
     public page: Page;
-    public browser: Browser;
+    
 
-    constructor(page: Page, browser: Browser) {
+    constructor(page: Page) {
         this.page = page;
-        this.browser = browser;
     }
 
-    async goto(url: string, options: any): Promise<void> {
+    async goto(url: string, ){
         try {
             console.log(`Navigating to ${url}...`);
-            await this.page.goto(url, options);
+            await this.page.waitForTimeout(5000)
+            await this.page.goto(url);
         } catch (error) {
             console.error("An error occurred during navigation:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
-    async getUrl(): Promise<string> {
+    async getUrl(): Promise<any> {
         try {
-            return await this.page.url();
+            console.log( this.page.url());
         } catch (error) {
             console.error("An error occurred while getting URL:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -39,7 +40,7 @@ export class utils {
             console.error("An error occurred while getting title:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
     async fillInput(locator: string, option: any): Promise<void> {
@@ -49,7 +50,7 @@ export class utils {
             console.error("An error occurred during filling Value:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
     async click(locator: string, option: any): Promise<void> {
@@ -59,7 +60,7 @@ export class utils {
             console.error("An error occurred during click:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -70,7 +71,7 @@ export class utils {
             console.error("An error occurred during double click:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -82,7 +83,7 @@ export class utils {
             console.error("An error occurred during delayed click:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -93,7 +94,7 @@ export class utils {
             console.error("An error occurred while waiting for element:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -104,7 +105,7 @@ export class utils {
             console.error("An error occurred while getting text:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -115,7 +116,7 @@ export class utils {
             console.error("An error occurred during keyboard action:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -126,7 +127,7 @@ export class utils {
             console.error("An error occurred during mouse hover:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -138,7 +139,7 @@ export class utils {
             console.error("An error occurred during mouse hover and click:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -149,7 +150,7 @@ export class utils {
             console.error("An error occurred during element focus:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 
@@ -161,7 +162,7 @@ export class utils {
             console.error("An error occurred during drag and drop:", error);
             throw error;
         } finally {
-            await this.browser.close();
+            await this.page.close();
         }
     }
 }

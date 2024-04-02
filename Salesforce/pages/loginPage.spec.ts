@@ -1,20 +1,20 @@
-import { Page, Browser, chromium } from 'playwright';
+import { Page } from 'playwright';
 import { utils } from '../utils';
 import url from "../Data/url.json";
 
 export class LoginPage {
-    private utils: utils;
-    private page: Page;
+    public utils: utils;
+    public page: Page;
     
-
-    constructor(page: Page, browser: Browser) {
+    constructor(page: Page) {
+        
         this.page = page;
-        this.utils = new utils(page, browser);
+        this.utils = new utils(page);
     }
 
     async login(username: string, password: string): Promise<void> {
         try {
-            await this.utils.goto(url.url, { waitUntil: 'domcontentloaded' });
+            await this.utils.goto(url.url);
             await this.utils.fillInput('input[name="username"]', username);
             await this.utils.fillInput('input[name="password"]', password);
             await this.utils.click('button[type="submit"]', { timeout: 1000 });
@@ -25,7 +25,6 @@ export class LoginPage {
             await View_All.click({ force: true });
         } catch (error) {
             console.error('Error during login:', error);
-           
         }
     }
 }
