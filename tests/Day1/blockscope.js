@@ -9,6 +9,7 @@ function greet() {
     console.log(first + 'Home')
 }
 
+console.log(first)
 /* The var keyword is used to declare variables with function scope.
 This means that a variable declared with var can be accessed anywhere within the function 
 in which it was declared, but not outside of that function. */

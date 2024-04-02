@@ -1,0 +1,18 @@
+Salesforce
+
+Username  : majay3574@gmail.com
+password  : Ajaymichael@8428
+
+
+git hub
+
+majay3574
+
+
+Public Key Generation:
+ssh-keygen -t rsa -b 4096 -C "your mail id"
+
+To Read the Public key:
+cat .ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDfMpUcMLPCBcpWM9ea/6DZxFNi7gAiV5zMUtyHfc5dGImHVBIzp89Nck3IkL8GzvLah7BXb9jEa5bNaLYZpD44vm0hpijuoKBiugABdmWSavWWmnqmhHsqhFERuY2dTwe3XhznEvSeLSLRjy4ZR9sLRhsJNlrPM53MHh64DiEw+yesqLXZuEdz3xE9+Hu89Eh5V6wptvz6XIBZZamrnZ7EOKpyc3rfK+ovwlpe4Z0U1UrtcDT3OeqYqpOhjuFDbzXQlmAjbU8lka1Ipxi3sUDXgSszcNKQKkk43Zd0eFoSzaXtAfICT3VjzgcmOOaFQ6hK22rthg7bDyApbWVLIdbedvJYozZzU1HuFnDLHfeM/POjQj2bfQYAQUKoi6A/poFOFnjEuAT9Av0wkDkzcCNKNG0SZOc6yZwmBGwBQrCAS0duYYkm4xw+pydGSLf31WVxtEhg1D6vK5xH2k+jTWQYQLREOZGSDD6yyBkP2kbixsrw33jvXpIerAVxEXyCVeS02wLcC7S9PPwEIGAVpMigZFETI6ye4vsXvfOmkk5rCHcQsYuEF1VlfFqKVm4/dbLst8+Tx56fzfRJSQQHm62t/5mnxtkmCGvlGnDr4ZyPKcuIS//jgK7wM46JeF/aGFFzyNC1rYnrJXtlhCXFe1UgPFafgoNim+1q8UCF9uynHw== majay3574@gmail.com
