@@ -32,9 +32,9 @@ console.log(formattedIds)
 
 fs.writeFileSync('example.json', JSON.stringify(formattedIds));
 
-const encodedString = "9v1V/Hua825yX3swXf8iPA==";
+// const encodedString = "9v1V/Hua825yX3swXf8iPA==";
 
-// Decode the base64 encoded string
-const decodedString = atob(encodedString);
+// // Decode the base64 encoded string
+// const decodedString = atob(encodedString);
 
-console.log(decodedString); // Output: S@laijai13
+// console.log(decodedString); // Output: S@laijai13

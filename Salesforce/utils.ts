@@ -1,5 +1,6 @@
 import { Page } from 'playwright';
-
+import test from '@playwright/test'
+import { promises } from 'dns';
 export class utils {
     readonly:utils
     public page: Page;
@@ -9,17 +10,19 @@ export class utils {
         this.page = page;
     }
 
-    async goto(url: string, ){
-        try {
-            console.log(`Navigating to ${url}...`);
-            await this.page.waitForTimeout(5000)
-            await this.page.goto(url);
-        } catch (error) {
-            console.error("An error occurred during navigation:", error);
-            throw error;
-        } finally {
-            await this.page.close();
-        }
+    async goto(url: string, ):Promise<void>{
+        test(`Navigating to the Url`,async()=>{
+            try {
+                console.log(`Navigating to ${url}...`);
+                await this.page.goto(url);
+            } catch (error) {
+                console.error("An error occurred during navigation:", error);
+                throw error;
+            } finally {
+                await this.page.close();
+            }
+        })
+        
     }
 
     async getUrl(): Promise<any> {
