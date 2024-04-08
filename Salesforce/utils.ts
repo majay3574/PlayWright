@@ -1,7 +1,7 @@
 import { Page } from 'playwright';
 import test from '@playwright/test'
 import { promises } from 'dns';
-export class utils {
+export abstract class utils {
     readonly:utils
     public page: Page;
     

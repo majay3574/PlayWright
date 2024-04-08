@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { faker } from "@faker-js/faker";
+import  {faker}  from "@faker-js/faker";
 import user from "./Data/userdata.json"
 //import generator from "./randomGeneratoe"
 

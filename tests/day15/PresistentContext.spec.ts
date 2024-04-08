@@ -1,6 +1,6 @@
 import test, { chromium } from "@playwright/test"
 
-test.only(`using persistentContext`, async ({ }) => {
+test(`using persistentContext`, async ({ }) => {
 
    // const userDataDir = "./myUserDataDir";
     const browser = await chromium.launchPersistentContext("./myUserDataDir", {

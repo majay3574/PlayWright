@@ -2,14 +2,13 @@ import { Page } from 'playwright';
 import { utils } from '../utils';
 import url from "../Data/url.json";
 
-export class LoginPage {
-    public utils: utils;
+export class LoginPage extends utils {
+    readonly utils: utils;
     public page: Page;
     
     constructor(page: Page) {
+        super(page)
         
-        this.page = page;
-        this.utils = new utils(page);
     }
 
     async login(username: string, password: string): Promise<void> {
