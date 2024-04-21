@@ -1,4 +1,5 @@
 import test from "@playwright/test"
+import { log } from "console";
 
 
 test(`handling alert`, async ({ page, context }) => {
@@ -20,6 +21,8 @@ test(`handling alert`, async ({ page, context }) => {
         console.log(`title of the page: ${title}`);
         if (title === 'Web Table') {
             webPage = pages[index];
+            console.log(webPage);
+            
         }
         //console.log(webPage)
     }

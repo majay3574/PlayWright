@@ -3,7 +3,7 @@ import test from "@playwright/test"
 
 test(`handling alert`,async({page})=>{
 
-    page.goto("https://www.leafground.com/alert.xhtml")
+    await page.goto("https://www.leafground.com/alert.xhtml")
 
     page.on('dialog',async dialog =>{
         const alertmessage=dialog.message()
@@ -18,7 +18,7 @@ test(`handling alert`,async({page})=>{
     await page.waitForTimeout(2000)
     const confirmAlert = page.locator(".card").filter({hasText:" Alert (Confirm Dialog)"})
     await confirmAlert.locator("span:text-is('Show')").click({force:true})
-await page.waitForTimeout(2000)
+    await page.waitForTimeout(2000)
     const SimpleDialog = page.locator(".card").filter({hasText:" Alert (Simple Dialog)"})
     await SimpleDialog.locator("span:text-is('Show')").nth(0).click({force:true})
 
