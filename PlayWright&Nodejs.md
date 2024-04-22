@@ -15,6 +15,9 @@ updating playwright
 
 npm install -D @playwright/test@latest
 
+allure
+allure open allure-report
+
 npm
 npm install -g npm@latest
 npm install -g npm
@@ -23,7 +26,10 @@ Csv installation
    npm install csv
    npm install csv-parse
 
+
+C:\Users\AjayMichael\AppData\Roaming\npm
 download ts execution
+    npm install -g typescript
     npm install -g ts-node
 	ts-node filename.ts
 	npm uninstall -g typescript
@@ -116,3 +122,23 @@ Executes the rest of the current function and pauses at the return point to the 
 A browsing context is an environment in which Document objects are presented to the user. 
 A tab or window in a Web browser typically contains a browsing context, as does an iframe or frame s in a frameset .
  Each browsing context has a corresponding WindowProxy object.
+ 
+ 
+ 
+ replace(/ /g, ''); 
+ In regular expressions, / /g is a pattern used to match all occurrences of a single space character (" ") within a string. Let me break down the components:
+
+/ /: This is the pattern itself, enclosed between two forward slashes (/). In this case, it's a single space character, indicating what we want to match.
+g: This is a flag that stands for "global." When used with a regular expression, it means that the pattern should be applied globally, matching all occurrences within the string rather than just the first one.
+
+
+
+Install browser by Powershell  --> $Env:PLAYWRIGHT_DOWNLOAD_HOST="http://192.0.2.1"
+npx playwright install
+
+specified Path ---> $Env:PLAYWRIGHT_BROWSERS_PATH="$Env:USERPROFILE\pw-browsers"
+npx playwright install
+
+
+install Cucumber in playwright
+---> npm i @cucumber/cucumber
