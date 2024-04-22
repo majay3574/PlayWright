@@ -1,11 +1,11 @@
 {
   "name": "playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Try it",
   "main": "index.js",
-  "scripts": {},
+  "scripts": { },
   "keywords": [],
-  "author": "",
+  "author": "Ajay Michael",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -17,6 +17,7 @@
     "playwright": "^1.41.2"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^9.3.0",
     "axios": "^1.6.7",
     "csv": "^6.3.6",
     "csv-parse": "^5.5.3",

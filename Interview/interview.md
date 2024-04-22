@@ -1,11 +1,11 @@
 1. Access modifiers in JavaScript
    JavaScript doesn't have access modifiers like Java or Python. However, it does have a few features that can be used to control the visibility of variables and functions.
 
-Var keyword:
+   Var keyword:
     Variables declared with the var keyword are function-scoped, which means they are accessible anywhere within the function in which they are declared.
-Let keyword:
+   Let keyword:
     Variables declared with the let keyword are block-scoped, which means they are accessible anywhere within the block in which they are declared.
-Const keyword:
+   Const keyword:
     Variables declared with the const keyword are also block-scoped, but their values cannot be changed once they are initialized.
 
 2. Diff between DOM and BOM
@@ -55,3 +55,55 @@ Use a JavaScript IDE.
      var myFunction = () => { 
           console.log("Hello World"); 
           } 
+
+8.  What is the package.json. What will be inside package.json other than dependencies?
+      the package.json file! It's like a little bunny's nest filled with essential information for a Node.js project. Besides dependencies, it holds metadata about the project, such as its name, version, description, author, and more. 
+
+9.  What is the promise in JavaScript? What are the different promise statuses in JavaScript?
+     In JavaScript, a promise is like a bunny's word that something will happen in the future. It can either succeed (fulfilled) or fail (rejected).
+
+      Think of it like this:
+        Pending: Bunny's waiting for something to happen.
+        Fulfilled: Bunny happily gets its carrot.
+        Rejected: Bunny sadly doesn't get its carrot.
+
+    We use promises to handle asynchronous tasks neatly, making sure our code behaves gracefully whether things go right or wrong. 🐰🥕
+
+10. What will cucumber.js file do?
+     The cucumber.js file acts as a guidebook for running Cucumber tests in JavaScript projects. It sets up the locations of your test features, defines how your tests behave, and configures any additional functionalities needed during testing. Keeping it straightforward ensures smooth sailing through your testing journey! 🥒
+
+11. What are the exceptions you have come across in javascript
+     TypeError: When you use a variable or function incorrectly.
+     ReferenceError: When you try to use something that doesn't exist.
+     SyntaxError: When your code is written incorrectly.
+     RangeError: When you try to manipulate something outside its limits.
+     URIError: When you mess up with web addresses.
+
+12. What is module in typescript?
+    In TypeScript, a module is a way to organize code into separate files, each containing related functionality. Modules help keep code clean, maintainable, and reusable by encapsulating logic into distinct units.
+
+    There are two main types of modules in TypeScript:
+
+    Internal Modules (Namespaces): Before TypeScript 1.5, namespaces were used to organize code into logical groups. They act as containers for variables, functions, classes, and other objects. Namespaces are still supported in TypeScript, but they're generally considered outdated in favor of ES6 modules.
+    External Modules (ES6 Modules): With the introduction of ES6, JavaScript gained native support for modules. TypeScript embraces ES6 modules, allowing you to define modules using import and export keywords. External modules provide better support for module dependency management, code isolation, and interoperability with other module systems.
+    Using modules in TypeScript enables you to:
+
+    Organize code into smaller, manageable pieces.
+    Encapsulate functionality to prevent naming conflicts.
+    Reuse code across different parts of your application or in other projects.
+    Improve maintainability and readability by promoting a modular architecture.
+
+Azure devops:
+13.	How do you connect your automation code to Azure Devops?
+    Connecting your automation code to Azure DevOps involves setting up a pipeline or a build/release definition in Azure DevOps that triggers the execution of your automation code whenever certain conditions are met, such as code changes or scheduled runs. Here's a general overview of the steps involved:
+
+     Set up a Repository: First, ensure that your automation code is hosted in a version control system supported by Azure DevOps, such as Git. If your code is not already in a repository, create one and push your code to it.
+      -->Create a Pipeline or Build/Release Definition: In Azure DevOps, navigate to the Pipelines (or Builds or Releases) section depending on whether you're setting up a CI/CD pipeline or a build/release definition. Then, create a new pipeline or definition.
+      -->Choose a Repository: Select the repository where your automation code is hosted. Azure DevOps will monitor this repository for changes and trigger pipeline runs accordingly.
+      --> Configure Trigger: Set up triggers to define when your pipeline should run. You can configure triggers based on code commits, pull requests, schedules, or manual triggers.
+      -->Define Build Steps or Tasks: Define the steps or tasks that Azure DevOps should execute as part of your pipeline. These steps typically include tasks such as fetching the code, installing dependencies, running tests, and deploying the application.
+      -->Integrate with Testing Frameworks: If your automation code includes tests, ensure that your pipeline is configured to run these tests. Integrate with your testing frameworks and specify the appropriate test commands or scripts to execute.
+      -->Set up Environment Variables: Configure any environment variables or settings required by your automation code, such as API keys, environment URLs, or configuration files.
+      -->Review and Save: Review your pipeline configuration to ensure everything is set up correctly. Save your changes once you're satisfied with the configuration.
+      -->Run Pipeline: Trigger a manual run of your pipeline to verify that everything is working as expected. Monitor the pipeline execution and check for any errors or failures.
+      -->Monitor and Iterate: Monitor the performance of your pipeline and automation code over time. Make any necessary adjustments or improvements based on feedback and performance metrics.
