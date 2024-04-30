@@ -20,7 +20,7 @@ export default defineConfig({
   retries: 0,
   /* Opt out of parallel tests on CI. */
  
-  workers:  2,
+  workers:1,
 
   timeout:120000,
    expect: {

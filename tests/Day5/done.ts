@@ -1,7 +1,13 @@
-let Market = {
-    "fruit": "mango",
-    "Monsoon": "summer",
-    "price": null
+const Market = {
+    fruit: "mango",
+    lifeSpan: 20,
+    price:0
 };
- 
-console.log (Market.price+Market.Monsoon)
+
+const cityMarket = {
+    fruit: "Apple",
+    lifeSpan: 25,
+    price: 100
+};
+
+console.log( cityMarket.price+Market.price); 
