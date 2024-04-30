@@ -45,15 +45,15 @@ test(`getting account VAlue `, async ({ request }) => {
             "Authorization": `Bearer ${accessToken}`
         }
     })
-    let AccountResponse: any = await gettheAccounts.json(); 
+    let AccountResponse: any = await gettheAccounts.json();
     console.log(AccountResponse);
 
     let idArray: string[] = [];
-    
+
     for (let i = 0; i < AccountResponse.recentItems.length; i++) {
         idArray.push(AccountResponse.recentItems[i].Id);
     }
-console.log(idArray)
+    console.log(idArray)
     let formattedIds: { Id: string }[] = [];
 
     for (let i = 0; i < idArray.length; i++) {
@@ -63,7 +63,7 @@ console.log(idArray)
     // const jsonData = JSON.stringify(formattedIds);
     // console.log(jsonData);
     fs.writeFileSync('data.json', JSON.stringify(formattedIds));
-    
+
 
 
 })

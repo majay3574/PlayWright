@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("mocks a test call to API", async ({ page }) => {
-  const routePattern = '**/services/data/v36.0/sobjects/Lead/*';
+  const routePattern = '**/aura?preloadActions';
 
   await page.route(routePattern, async route => {
     const jsonResponse = {

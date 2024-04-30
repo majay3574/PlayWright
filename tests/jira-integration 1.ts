@@ -93,5 +93,4 @@ async function updateJiraIssue(issueKey: string, folderPath: string) {
         console.error('Attachment upload failed:', error.message);
     }
 }
-
-export { createJiraIssue, updateJiraIssue }
+                     
