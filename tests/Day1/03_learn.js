@@ -36,7 +36,7 @@ function runTests(testType) {
         case 'regression':
             console.log('Running regression tests');
             break;
-        default:
+        default :
             console.log('Running default smoke tests');
             break;
     }

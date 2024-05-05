@@ -1,4 +1,4 @@
-// let fname = "Jay";
+let fname = "Jay";
 // let reversedName = "";
 /* 
 for (let i = fname.length - 1; i >= 0; i--) {
@@ -11,7 +11,7 @@ function reverse(fname) {
     for (let i = fname.length -1; i >=0; i--) {
         reversedName += fname[i];
     }
-    console.log(fname[i]);
+    console.log(reversedName);
 }
 
 reverse("Ajay Michael"); // Output: "yaJ"
@@ -20,6 +20,17 @@ reverse("Ajay Michael"); // Output: "yaJ"
 let fnamed = fname.split('').reverse().join('');
 console.log(fnamed);
 
+
+function rev(actualName){
+    let name=""
+    for(let i =actualName.length -1;i>=0;i--){
+        if(i%2 == 1){
+            name+=actualName[i]
+        }
+    }
+    console.log(name);
+}
+rev("Ajay Michael")
 
 /* 
 function reverse(fname) {
