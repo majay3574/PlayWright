@@ -13,7 +13,7 @@
 
         import { chromium, Page } from 'playwright';
         
-        class DashboardPage {
+        class  DashboardPage {
             public page: Page;
             public url: string;
         
