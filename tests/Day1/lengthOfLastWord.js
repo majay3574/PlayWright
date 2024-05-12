@@ -1,11 +1,18 @@
 
-function lengthOfLastWord(s) {
+
+function lengthOfLastWord(fname) {
  
-    const words = s.split(" ");
+    const words = fname.split(" ");
    // [ 'Hello', 'World' ]
     const lastWord = words[words.length - 1];
-    return lastWord.length;
+    console.log(lastWord.length);
 }
+lengthOfLastWord("Ajay Michael")
+//words=["Ajay","Michael"]  --> 2 -->0,1 1
+lengthOfLastWord("He is a good")
+lengthOfLastWord("bad boy")
 
-let s= "Ajay Michael"
-console.log(lengthOfLastWord(s) );
+
+// let man =["ranf","maja"]
+// let nan = man.length
+// console.log(nan);
