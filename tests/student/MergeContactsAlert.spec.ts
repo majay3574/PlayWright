@@ -50,7 +50,7 @@ test("Merge Contact", async ({ page, context }) => {
   const newTab = await newPage;
   console.log("New Tab title:" + (await newTab.title()));
 
-  await newTab.click(`(//table[@class='x-grid3-row-table']//td//a)[1]`);
+  await newTab.locator(`(//table[@class='x-grid3-row-table']//td//a)[1]`).click()
 
   
 

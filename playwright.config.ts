@@ -11,7 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  
+
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -19,16 +19,16 @@ export default defineConfig({
   /* Retry on CI only */
   retries: 0,
   /* Opt out of parallel tests on CI. */
- 
-  workers:1,
 
-  timeout:120000,
-   expect: {
-     timeout: 10000 
-     },
+  workers: 1,
+
+  timeout: 120000,
+  expect: {
+    timeout: 10000
+  },
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -36,10 +36,10 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
-    video:'on',
-    screenshot:'on',
-    headless:false
-    
+    video: 'on',
+    screenshot: 'on',
+    headless: false
+
   },
 
   /* Configure projects for major browsers */
@@ -52,7 +52,7 @@ export default defineConfig({
         args: ["--start-maximized"]
         } 
        },
-      
+
     },
     // {
     //   name: 'Mobile Safari',
@@ -68,10 +68,11 @@ export default defineConfig({
     // }},
     // },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+  //  { name: 'webkit',
+  //   use: {
+  //     ...devices['Desktop Safari'],
+  //     viewport: { width: 1280, height: 680 }
+  //   }}
 
     /* Test against mobile viewports. */
     // {
@@ -101,5 +102,5 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 
-  
+
 });

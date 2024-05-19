@@ -36,7 +36,7 @@ test('Get Access token from Salesforce', async ({ request }) => {
 })
 
 test(`getting account VAlue `, async ({ request }) => {
-    const opppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity"
+    const opppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/lead"
     let gettheAccounts = await request.get(opppurl, {
         headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,7 @@ test(`getting account VAlue `, async ({ request }) => {
     console.log(formattedIds)
     // const jsonData = JSON.stringify(formattedIds);
     // console.log(jsonData);
-    fs.writeFileSync('data.json', JSON.stringify(formattedIds));
+    fs.writeFileSync('./tests/API/data.json', JSON.stringify(formattedIds));
 
 
 
@@ -70,7 +70,7 @@ test(`getting account VAlue `, async ({ request }) => {
 
 data.forEach(accounts => {
     test(`deleting opportunity with id ${accounts.Id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity/" + accounts.Id;
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/lead/" + accounts.Id;
         console.log(oppurl)
         let deleteTheAccounts = await request.delete(oppurl, {
             headers: {

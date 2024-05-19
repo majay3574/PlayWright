@@ -44,6 +44,20 @@ npm list -g typescript
 
 code Gen
     npx playwright codegen
+	
+Emulate geolocation, language and timezone
+	npx playwright codegen --timezone="Europe/Rome" --geolocation="41.890221,12.492348" --lang="it-IT" bing.com/maps
+	
+	test.use({
+  geolocation: {
+    latitude: 41.890221,
+    longitude: 12.492348
+  },
+  locale: 'it-IT',
+  permissions: ['geolocation'],
+  timezoneId: 'Europe/Rome'
+});
+
 
 execution policy -----> Get-ExecutionPolicy
                         Set-ExecutionPolicy
@@ -142,3 +156,54 @@ npx playwright install
 
 install Cucumber in playwright
 ---> npm i @cucumber/cucumber
+
+install excel integration
+---> npm install exceljs @types/exceljs
+
+
+Agile ceremonies are regular meetings that happen throughout a project's development cycle to ensure that goals are being met and that all team members are on the same page. The four main Agile ceremonies are:
+Sprint planning
+Occurs at the beginning of every sprint, and allows developers to review team goals and the product backlog with the product owner.
+Daily stand-up
+A short meeting with clearly defined goals and outcomes that encourages progress and accountability.
+Sprint review
+Focuses on the results of a sprint, and covers the work that was completed, and any items that were not covered.
+Sprint retrospective
+An opportunity for the team to reflect on the work completed over a short period of time and make changes. 
+
+
+int ranNum = (int) (Math.random() * 999999 + 1000000);
+
+
+BDD --->capture the behaviour of the application and write a testcase
+        after that only the developers start the development
+		to build the quality of the application 
+		
+		
+		
+		
+	NewMan Installation
+	
+	--  npm install -g newman
+	--  npm install newman-reporter-html
+ run cmd -->newman run "path of collection" --reporters html --reporter-html-export "reporter Path"
+ multi data -->newman run "path of collection" --iteration-data "data.json" --reporters html --reporter-html-export "report.html"
+ 
+ newman run path/to/your-collection.json -r html
+
+
+npm install allure-playwright
+npm install allure-commandline --save-dev
+npx allure generate allure-results --clean -o allure-report
+npx allure serve allure-results
+zip -r allure-report.zip allure-report
+
+npm install -g http-server
+http-server allure-report
+
+
+
+
+		
+		
+		

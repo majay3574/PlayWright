@@ -1,6 +1,6 @@
 function calculateGrade(score) {
     let grade;
-    switch (true) {
+    switch (score) {
         case (score >= 90 && score <= 100):
             grade = 'A';
             break;

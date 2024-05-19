@@ -9,7 +9,9 @@ for (const element of data) {
         await page.fill('input[name="pw"]', element.password);
         await Promise.all([
             page.click('input[name="Login"]'),
+            page.waitForTimeout(10000)
         ]);
+        
         // Add assertions here to verify login success
     });
 };

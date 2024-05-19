@@ -7,8 +7,10 @@ data.forEach(element => {
         await page.goto("https://login.salesforce.com/");
         await page.fill('input[name="username"]', element.username);
         await page.fill('input[name="pw"]', element.password);
+        const button =  page.getByText('Submit', { exact: true }).click()
+
         await Promise.all([
-            page.click('input[name="Login"]'),
+            page.click('input[name="Login"]',{strict:true}),
             page.waitForNavigation()
         ]);
         // Add assertions here to verify login success
