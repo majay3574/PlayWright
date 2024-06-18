@@ -2,7 +2,7 @@
 
     "default" :{
     
-    "paths":["tests/cucumber/features/"]
+    "paths":["tests/cucumber/features/login.feature"]
     
     }
     

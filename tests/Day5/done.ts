@@ -7,7 +7,7 @@ const Market = {
 const cityMarket = {
     fruit: "Apple",
     lifeSpan: 25,
-    price: 100
+    price:100
 };
 
 console.log( cityMarket.price+Market.price); 

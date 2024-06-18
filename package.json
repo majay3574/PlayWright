@@ -28,6 +28,9 @@
     "env-cmd": "^10.1.0",
     "exceljs": "^4.4.0",
     "faker": "^5.5.3",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "qrcode": "^1.5.3",
     "redis": "^4.6.13",
     "typescript": "^5.3.3"
   }

@@ -9,17 +9,17 @@ Hint - Use mod operator(%)
    Call that function from the javascript
 
 Time: 10 Minutes */
-let msg ="The expected odd number is = "
+let msg = "The expected odd number is = "
 
-function oddNumber(){
-    for (let index = 1; index <=25; index++) {
-        if(index%2!=0){
-            console.log(`${msg }`+ index)
-            
+function oddNumber(num) {
+    for (let index = 1; index <= num; index++) {
+        if (index % 2 != 0) {
+            console.log(`${msg}` + index)
+
         }
-       
-        }       
+
+    }
 }
-oddNumber()
+oddNumber(100)
 
 
