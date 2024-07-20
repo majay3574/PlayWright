@@ -22,3 +22,9 @@ test(`Testing multiple window open`,async({page,context})=>{
    
     await window.bringToFront()
 })
+
+
+/* const [newPage] = await Promise.all([
+    context.waitForEvent('page'), // Wait for the popup
+    page.click('a[target="_blank"]') // Action that opens the popup
+  ]); */

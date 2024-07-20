@@ -12,6 +12,5 @@ for (const element of data) {
             page.waitForTimeout(10000)
         ]);
         
-        // Add assertions here to verify login success
     });
 };
