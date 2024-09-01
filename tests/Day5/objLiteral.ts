@@ -4,12 +4,13 @@ type supportedBrowser = 'Chrome' | 'Safari';
 // Define the browserVersion type
 type browserVersion = 121 | 123;
 
+
 // Define the browserProfile type as an object literal
 type browserProfile = {
     browser: supportedBrowser;
     version: browserVersion;
 };
-
+/*  */
 // Define a function that takes a browserProfile as an argument
 function launchBrowser(profile: browserProfile) {
     if (profile.browser === 'Chrome') {

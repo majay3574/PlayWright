@@ -34,3 +34,17 @@ test(`handling drodown`, async ({ page }) => {
     await page.waitForTimeout(3000);
 
 })
+/* 
+const page = await browser.newPage();
+await page.setContent(`
+  <select>
+    <option value='1'>Order Number : 1234 (purchased on 10/01/2022)</option>
+    <option value='2'>Order Number : 4567 (purchased on 02/03/2022)</option>
+  </select>
+`);
+
+// Get option text that we want to select. You can use xpath as well, but this is probably
+// more readable!
+const optionToSelect = await page.locator('option', { hasText: '4567' }).textContent();
+// Use option text to select
+await page.locator('select').selectOption({ label: optionToSelect }); */

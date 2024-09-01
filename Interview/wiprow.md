@@ -141,6 +141,27 @@ iLink Interview:
 8. In which situation for loop needs to use and which situation foreach?
 9. Difference b/t setTimeout and setIntervals?
 10. Difference b/t '==' and '==='?
+
+        In JavaScript, == and === are comparison operators, 
+           1) == (Loose Equality):
+
+             Compares two values for equality after converting both values to a common type (type coercion).
+             Example:
+              javascript
+              5 == "5"; // true, because "5" is converted to a number before comparison
+              null == undefined; // true, because null and undefined are considered equal in loose equality
+
+           2) === (Strict Equality):
+
+             Compares two values for equality without converting types (no type coercion).
+            Example:
+            javascript
+            5 === "5"; // false, because the types (number and string) are different
+            null === undefined; // false, because null and undefined are different types
+
+            Key Differences:
+            == allows type conversion during comparison.
+            === requires both the value and the type to be the same for a comparison to return true.
 11. How to handle flaky tests in playwright?
 
 Capegemini:

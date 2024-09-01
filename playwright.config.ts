@@ -1,14 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
   testDir: './tests',
 
@@ -18,10 +9,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: 0,
-  /* Opt out of parallel tests on CI. */
-
   workers: 1,
-
   timeout: 120000,
   expect: {
     timeout: 10000
@@ -46,12 +34,13 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chromium'] ,
-      viewport: null,
-      launchOptions: {
-        args: ["--start-maximized"]
-        } 
-       },
+      use: {
+        ...devices['Desktop Chromium'],
+        viewport: null,
+        launchOptions: {
+          args: ["--start-maximized"]
+        }
+      },
 
     },
     // {
@@ -68,11 +57,11 @@ export default defineConfig({
     // }},
     // },
 
-  //  { name: 'webkit',
-  //   use: {
-  //     ...devices['Desktop Safari'],
-  //     viewport: { width: 1280, height: 680 }
-  //   }}
+    //  { name: 'webkit',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //     viewport: { width: 1280, height: 680 }
+    //   }}
 
     /* Test against mobile viewports. */
     // {

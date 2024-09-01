@@ -2,11 +2,10 @@ import { test } from '@playwright/test';
 import * as dotenv from 'dotenv';
 import { join } from 'path';
 
-// Load the environment variables from the .env file located in the data directory
 dotenv.config({ path: join(__dirname, 'data', '.env') });
 
 test(`Reading data from .env file`, async ({ page }) => {
-  // Ensure environment variables are loaded
+
   if (!process.env.QA_URL || !process.env.QA_UNAME || !process.env.QA_PWD) {
     throw new Error('Environment variables are not loaded correctly.');
   }
