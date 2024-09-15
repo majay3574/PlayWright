@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import * as dotenv from 'dotenv';
 import { join } from 'path';
 
-dotenv.config({ path: join(__dirname, 'data', '.env') });
+dotenv.config({ path: join(__dirname, 'data', 'data.env') });
 
 test(`Reading data from .env file`, async ({ page }) => {
 
