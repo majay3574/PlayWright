@@ -12,10 +12,9 @@ Time: 10 Minutes */
 let msg = "The expected odd number is = "
 
 function oddNumber(num) {
-    for (let index = 1; index <= num; index++) {
-        if (index % 2 != 0) {
-            console.log(`${msg}` + index)
-
+    for ( let i = 1; i <= num; i++) {
+        if (i % 2 != 0) {
+            console.log(`${msg}` + i)
         }
 
     }

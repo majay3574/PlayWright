@@ -22,7 +22,7 @@ console.log(typeof companyName)
 
 let mobileNumber =8428543434;
 console.log(typeof mobileNumber)
-
+ṇ
 let isAutomation =true;
 console.log(typeof isAutomation)
 
