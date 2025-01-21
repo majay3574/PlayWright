@@ -23,7 +23,7 @@ test('Create General Journal Entry', async ({ page, context }) => {
     await page.goto("https://businesscentral.dynamics.com/");
     await page.locator("[id^='hero-basic_access-your-dynamics-']").filter({ hasText: "Sign in" }).click();
 
-    // Wait for the Microsoft login page
+   
     const microsoftPage = await context.waitForEvent('page');
     console.log(await microsoftPage.title());
     await page.close();

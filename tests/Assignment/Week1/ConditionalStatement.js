@@ -2,6 +2,7 @@ function launchBrowser(browserName) {
     if (browserName === 'chrome') {
         console.log("Supported Browser - ", browserName);
     }
+
     else if (browserName === 'firefox') {
         console.log("Supported Browser - ", browserName);
     }
@@ -18,7 +19,6 @@ function launchBrowser(browserName) {
 let defaultName="Chrome".toLowerCase()
 
 launchBrowser(defaultName)
-
 
 
 function runTests(testType) {

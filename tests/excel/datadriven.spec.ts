@@ -8,7 +8,7 @@ test.describe('Excel Data-Driven Test', () => {
    
     test.beforeAll(() => {
         const reader = new ExcelReader('./../excel/data/book1.xlsx');
-        excelData = reader.readCell(0); // Reading the first sheet
+        excelData = reader.readExcel(0); // Reading the first sheet
     });
 
     // Example test using Excel data

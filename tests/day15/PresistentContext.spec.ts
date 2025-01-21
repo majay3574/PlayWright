@@ -1,28 +1,44 @@
-import test, { chromium } from "@playwright/test"
+import test, { chromium } from "@playwright/test";
 
-test(`using persistentContext`, async ({ }) => {
+test(`using persistentContext`, async () => {
+    const userDataDir = "C:/Users/AjayMichael/AppData/Local/Google/Chrome/User Data";
 
-   // const userDataDir = "./myUserDataDir";
-    const browser = await chromium.launchPersistentContext("./myUserDataDir", {
-        headless: false,channel:'chrome',
-        httpCredentials: {
-            username: "admin",
-            password: "testleaf",
-            origin: "http://leafground.com:9323"
-        }
+
+    const context = await chromium.launchPersistentContext(userDataDir, {
+        headless: false,
     });
-    const page = await browser.newPage();
-    await page.goto("https://leafground.com/auth.xhtml");
+    const page = await context.newPage();
 
-    // Wait for the 'Basic Auth' button to appear and then click it
-    await page.waitForSelector('span:has-text("Basic Auth")');
-    await page.click('span:has-text("Basic Auth")');
+    await page.goto("https://qeagle.keka.com/#/home/dashboard");
+    await page.waitForLoadState('networkidle');
 
-    
+
+    const allPages = context.pages();
+    console.log(`Total open pages: ${allPages.length}`);
+    for (const p of allPages) {
+        const title = await p.title();
+        if (title.includes(" Home | Dashboard")) {
+            await p.bringToFront();
+            console.log(`Switched to page with title: ${title}`);
+            break;
+        }
+    }
+    let clockOut = page.locator("//button[text()='Clock-out']");
+
+    if (await clockOut.isVisible()) {
+        await clockOut.click({ force: true });
+        await page.waitForTimeout(1000);
+        await page.click("//div[@class='ng-star-inserted']//button[text()='Clock-out']", { force: true });
+    } else {
+        console.log("there is nothing to click");
+    }
+    await page.waitForTimeout(5000);
+
 });
 
 
-test(`Persistent Context`, async () => {
+
+/* test(`Persistent Context`, async () => {
 
 
     const userDataDir = "./myUserDataDir";
@@ -30,8 +46,8 @@ test(`Persistent Context`, async () => {
 
     //Launch a persistent context
     const context = await chromium.launchPersistentContext(userDataDir, {
-        headless:false,channel:'msedge',
-        httpCredentials:{
+        headless: false, channel: 'msedge',
+        httpCredentials: {
             username: "admin",
             password: "testleaf",
             origin: "http://leafground.com:8090"
@@ -43,12 +59,12 @@ test(`Persistent Context`, async () => {
     await page.goto("https://leafground.com/auth.xhtml");
 
 
-    await page.getByRole('button', {name:'Basic Auth'}).click();
+    await page.getByRole('button', { name: 'Basic Auth' }).click();
 
 
-     await page.waitForTimeout(5000);
+    await page.waitForTimeout(5000);
 
 
 
-    
-})
+
+}) */

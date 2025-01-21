@@ -35,9 +35,9 @@ test('Get Access token from Salesforce', async ({ request }) => {
     console.log(inst_url)
 })
 
-multi.forEach(element => {
+/* multi.forEach(element => {
     test.skip(`deleting opportunity with id ${element.id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Opportunity/" + element.id;
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Lead/" + element.id;
         console.log(oppurl)
         let deleteTheOpportunity = await request.delete(oppurl, {
             headers: {
@@ -55,7 +55,7 @@ multi.forEach(element => {
 });
 
 test.skip(`deleting opportunity with id`, async ({ request }) => {
-    const oppurl = `${inst_url}/services/data/v36.0/sobjects/Opportunity/0065g00000cEbqXAAS`;
+    const oppurl = `${inst_url}/services/data/v36.0/sobjects/Lead/0065g00000cEbqXAAS`;
 
     let deleteTheOpportunity = await request.delete(oppurl, {
         headers: {
@@ -69,10 +69,10 @@ test.skip(`deleting opportunity with id`, async ({ request }) => {
     let getResponse = deleteTheOpportunity.status();
     console.log(getResponse)
     expect(getResponse).toBe(204);
-});
+}); */
 
 test(`getting account VAlue `, async ({request}) => {
-    const opppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account"
+    const opppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Lead"
     let gettheAccounts = await request.get(opppurl, {
         headers: {
             "Content-Type": "application/json",
@@ -92,12 +92,11 @@ console.log(AccountResponse)
 //}
 
 
-
 })
 
 account.forEach(accounts => {
     test.skip(`deleting opportunity with id ${accounts.id}`, async ({ request }) => {
-        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Account/" + accounts.id;
+        const oppurl = "https://qeagle8-dev-ed.develop.my.salesforce.com/services/data/v36.0/sobjects/Lead/" + accounts.id;
         console.log(oppurl)
         let deleteTheAccounts = await request.delete(oppurl, {
             headers: {

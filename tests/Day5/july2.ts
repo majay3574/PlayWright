@@ -48,7 +48,6 @@ function invokeBrowsers(browserName: supportedBrowsers): void {
 
     }
 
-
 }
 invokeBrowsers("Chromium");
 

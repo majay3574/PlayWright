@@ -18,10 +18,10 @@ type BrowserProfile = {
 function launchBrowser(browserProfile: BrowserProfile): void {
     if (browserProfile.browser === 'Chrome') {
         console.log(`Launching Chrome version ${browserProfile.version}`);
-        // Code to launch Chrome would go here
+
     } else if (browserProfile.browser === 'Edge') {
         console.log(`Launching Edge version ${browserProfile.version}`);
-        // Code to launch Edge would go here
+      
     } else {
         console.log('Unsupported browser');
     }

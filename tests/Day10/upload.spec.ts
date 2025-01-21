@@ -22,7 +22,10 @@ import path from "path"
         await fileChooser.setFiles([path.join(__dirname, 'testleaf.jpg'),
                                     path.join(__dirname, 'testleaf.jpg')])
         await page.waitForTimeout(5000);
-        await expect(page.locator("#drag-drop-upload")).toHaveClass(/dz-success-mark/)
+        await expect(page.locator("#drag-drop-upload")).toHaveClass(/dz-success-mark/);
+      /*   const dropZone = page.locator('#drop-zone');
+        const filePath = path.resolve('path/to/your/file.txt');
+        await dropZone.dispatchEvent('dragenter', { dataTransfer: { files: [filePath] } }); */
     })
 
 

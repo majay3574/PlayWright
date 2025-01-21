@@ -18,17 +18,14 @@
 
 
 
-function getBrowserVersion() {
-
+function getBrowserVersion(browserVersion) {
     if (browserVersion === 'Chrome') {
-        var blockVariable = 'Block Variable ';
+        let blockVariable = 'Block Variable ';
         console.log(blockVariable);
     }else{
-        let blockVariable = 'okay';
-        console.log(blockVariable);
+        let blockeScope = 'okay';
+      console.log(blockeScope);
     }
-
 }
-const browserVersion = 'Chro';
 
-getBrowserVersion(browserVersion);
+getBrowserVersion("Chrome");

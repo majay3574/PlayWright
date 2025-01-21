@@ -9,7 +9,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: 0,
-  workers: 1,
+  workers: 5,
   timeout: 120000,
   expect: {
     timeout: 10000
@@ -21,32 +21,35 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-
+    actionTimeout: 30000,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
     video: 'on',
     screenshot: 'on',
-    headless: false
+    headless: true
 
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'chrome',
       use: {
-        ...devices['Desktop Chromium'],
+        browserName: 'chromium', channel: 'chrome', headless: false,
         viewport: null,
         launchOptions: {
-          args: ["--start-maximized"]
+          slowMo: 300,
+          args: ["--start-maximized", "--disable-web-security", "--disable-features=IsolateOrigins,site-per-process", '--no-proxy-server']
+
         }
-      },
+
+      }
 
     },
     // {
     //   name: 'Mobile Safari',
     //   use: {
-    //     ...devices['iPhone 13'],
+    //     ...devices['Pixel 2 landscape'],
     //   },
 
     // {
