@@ -13,4 +13,3 @@ function convertOddToUpper() {
     console.log(result);
 }
 
-convertOddToUpper();

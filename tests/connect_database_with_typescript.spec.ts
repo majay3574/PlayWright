@@ -3,11 +3,11 @@ import mysql from 'mysql2/promise';
 
 export default class DB {
     private DBConfig: mysql.ConnectionOptions = {
-        host: 
-        user: 
-        database: 
-        password: 
-        port: 
+        host: "",
+        user: "",
+        database: "",
+        password: "",
+        port: 1111,
         waitForConnections: true,
         connectionLimit: 10,
         queueLimit: 0

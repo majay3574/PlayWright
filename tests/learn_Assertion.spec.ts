@@ -1,6 +1,6 @@
 import {  expect, test } from "@playwright/test";
  
-test.only('visibility', async ({ page }) => {
+test('visibility', async ({ page }) => {
  
     await page.goto("https://www.leafground.com/waits.xhtml")
     const cardToSelect = page.locator(".card").filter({hasText:"Wait for Visibility"})
