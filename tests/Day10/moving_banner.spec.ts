@@ -13,6 +13,7 @@ test.describe('LambdaTest Scenarios', () => {
     
     // Test message
     const testMessage = 'Welcome to LambdaTest';
+ 
     
     // Enter message in the text box
     await page.fill('#user-message', testMessage);

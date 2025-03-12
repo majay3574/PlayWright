@@ -19,10 +19,5 @@ test(`handling drodown`, async ({ page }) => {
     const source_dropdown = page.locator("#createLeadForm_dataSourceId");
     const dd = source_dropdown.locator("option")
    await source_dropdown.selectOption({ label:"Public Relations"})
-   /* if (source_dropdown) {
-    await source_dropdown.selectOption({ label:"Public Relations"});
-  } else {
-    console.error('Dropdown not found');
-  }
- */
+   
 })

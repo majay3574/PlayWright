@@ -8,6 +8,7 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
+  repeatEach:10,
   retries: 0,
   workers: 5,
   timeout: 120000,
@@ -26,7 +27,8 @@ export default defineConfig({
     trace: 'on',
     video: 'on',
     screenshot: 'on',
-    headless: true
+    headless: true,
+   // storageState:"storage/login.json"
 
   },
 

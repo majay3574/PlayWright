@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+
+<!-- template name: sbg.ibr.fido.html.form.login.template.html -->
+
+
+<!-- Configurable default behavior for the Remember Username checkbox -->
+<!-- set the checkbox to unchecked -->
+
+
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Sign in</title>
+    <base href="https://enterprisestssit.standardbank.co.za/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <script type="module" type='text/javascript' src="/sbgassets/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule type='text/javascript' src="/sbgassets/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="/sbgassets/@ionic/core/css/ionic.bundle.css">
+    <link rel="stylesheet" type="text/css" href="/sbgassets/dist/css/sbg.css?ver=1.0.0" />
+    <link rel="icon" type="image/png" href="sbgassets/images/favicon.ico">
+        
+    <script src="sbgassets/dist/scripts/login.af7bd0b88b1cc49be878.js"></script>
+    
+    <script src="sbgassets/dist/scripts/snippet.e2b0ccd31267e3a1c80f.js"></script>
+    
+    <script src="sbgassets/dist/scripts/adobe.5aee8ec211baa397b03e.js"></script>
+    
+    <script src="sbgassets/dist/scripts/bbsnippet.41c961325ff63ee36a26.js"></script>
+    
+    <script type="text/javascript"  nonce="ki2cIDxZfO9GB49N">
+        var dataLayer = {
+            loginStatus: "guest",
+            customerGUID: getAdobeData("adm"),
+            bpidguid: getAdobeData("bg"),
+            email_sha256: getAdobeData("eh"),
+            userLoginSuccess: false,
+            userRegistrationSuccess: false,
+            deviceType: /Mobile/i.test(navigator.userAgent) ? "Mobile" : "Desktop",
+            formisSubmitted: false,
+            formName: "Sign in",
+            formStatus: "",
+            siteErrorCode: "",
+            platformMessage: "",
+            websiteName: "Ping Oauth Authentication",
+            websiteNameCode: "PING",
+            siteLanguage: "English",
+            pageCategory: "Authentication",
+            pageName: "Authentication:Sign in with your Standard Bank ID",
+            pageSubSection1: "Authentication:Sign In",
+            pageSubSection2: "Authentication:Sign In:Sign in with your Standard Bank ID",
+            pageSubSection3: "",
+            pageSubSection4: "",
+            referrerID: "OID=" + new URLSearchParams(window.location.href).get('redirect_uri')
+        }
+    </script>
+    <script src="https://assets.adobedtm.com/45b28ee1a4af/a59301cc78d9/launch-c117cf047806-development.min.js" async></script>
+
+</head>
+
+<body class="body-container">
+    <!-- CAPTCHA settings-->
+    <div id="captchaEnabled" hidden>false</div>
+    <div id="captchaScriptName" hidden>"$captchaScriptName"</div>
+    <div id="captchaAttributes" hidden>$captchaAttributes</div>
+    <div id="captchaCSPNonce" hidden>"ki2cIDxZfO9GB49N"</div>
+
+    <ion-app>
+        <ion-content>
+            <div class="ping-logo login-template">
+                <div class="ping-outer-container">
+                    <div class="ping-logo login-template">
+                        <span class="company-logo"><img src="/sbgassets/images/sbg.png"
+                                alt="Standard Bank logo" /></span>
+                    </div>
+
+                    <form method="POST" action="/as/YV17YO2cLf/resume/as/authorization.ping" autocomplete="off" name="forms.digitalIdLoginForm">
+                        <div class="ping-container ping-signin login-template">
+                            <div class="ping-body-container">
+
+                                                                        <div class="content-column column-1 bm">
+                                            <div class="ping-header">
+                                                Sign in
+                                            </div>
+                                        </div>
+                                        <div class="ping-input-container" id="container-lipusername">
+                                            <ion-item>
+                                                <ion-label position="floating">
+                                                    Username
+                                                </ion-label>
+                                                <ion-input required class="validate" type="text" name="pf.username"
+                                                    id="lipusername" value="" autocorrect="off"
+                                                    autocapitalize="off"
+                                                    onKeyPress="return login.postOnReturn(event)"></ion-input>
+                                                <!---->
+                                            </ion-item>
+                                            <div class="custom-validator-alert" id="alertMessage-lipusername"></div>
+                                        </div>
+
+                                        <input id="password" type="hidden" name="pf.pass"
+                                            onKeyPress="return login.postOnReturn(event)" />
+
+                                        
+                                        
+                                        <div id="signIn" class="ping-buttons">
+                                            <input type="hidden" name="pf.ok" value="" />
+                                            <input type="hidden" name="pf.strongAuth" value="" />
+                                            <input type="hidden" name="pf.cancel" value="" />
+
+                                            <ion-button expand="block" onclick="login.postLogin();" id="signon"
+                                                class="ping-button normal allow" data-intent="confirmational"
+                                                data-scope="signin" data-id="link_content"
+                                                data-text="Ping:Sign In link click"
+                                                title="Sign In">
+                                                <span
+                                                    class="signin-text">Sign In</span>
+                                                <span class="loader spinner-button"></span>
+                                            </ion-button>
+                                                                                        <ion-button expand="block" onclick="login.postRegistration();"
+                                                class="ping-button-secondary normal allow desktop" fill="outline"
+                                                title="Register"
+                                                data-intent="query" data-scope="signin" data-id="link_content"
+                                                data-text="Ping:Regsiter an account click">
+                                                Register
+                                            </ion-button>
+                                                                                    </div><!-- .ping-buttons -->
+
+                                        <div class="ping-input-link ping-pass-change account-actions">
+                                                                                                                                                                                <input type="hidden" name="pf.usernamerecovery" value="" />
+                                            <a onclick="login.postRecoverUsername(); " data-intent="navigational"
+                                                data-scope="signin" data-id="link_content"
+                                                data-text="Ping:forgot username link click"
+                                                class="forgot-password">Forgot username</a>
+                                                                                    </div>
+
+                                        
+                                <input type="hidden" name="pf.adapterId" id="pf.adapterId" value="SADigitalFidoAdapter" />
+                            </div><!-- .ping-body-container -->
+
+                            <div class="ping-footer-container">
+                                <div class="ping-footer">
+                                    <div class="ping-register mobile">
+                                        <input type="hidden" name="pf.registration" value=""
+                                            data-intent="confirmational" data-scope="signin" data-id="link_content" />
+                                        Don't have an account? <a
+                                            data-intent="transactional" data-scope="signin" data-id="link_content"
+                                            data-text="Ping:Create an account link click"
+                                            onclick="login.postRegistration();">Register Here</a>
+                                    </div>
+                                </div>
+                                <!-- .ping-footer -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </ion-content>
+    </ion-app>
+
+    <script type="text/javascript">
+        const usernameEditable = 'true';
+
+        // @formatter:off
+        var serverVars = {
+            ok: 'pf.ok',
+            cancel: 'pf.cancel',
+            captchaEnabled: false,
+            passwordReset: 'pf.passwordreset',
+            usernameRecovery: 'pf.usernamerecovery',
+            alternateAuthnSystem: 'pf.alternateAuthnSystem',
+            registrationValue: 'pf.registration',
+            rememberUsernameCookieExists: false,
+            enableRememberUsername: false,
+            validation: {
+                required: 'Required',
+                typeMismatch: {
+                    email: 'html.form.login.template.invalidEmail'
+                },
+                patternMismatch: {
+                    lipmail: 'html.form.login.template.invalidEmail'
+                }
+            },
+            invalidateUsernameErrorMessage: 'Incorrect sign-in details. Please try again',
+        }
+
+        
+        
+        
+                // @formatter:on
+        const login = new Login(serverVars);
+
+                        function retVal() {
+            var result = {
+                "c": "tZ1PotC8Zse8g45XBJK11mT9TTuH2D4l"
+            }
+            return result;
+        }
+        loader("363765", "login");
+        carbon("363765");
+            </script>
+</body>
+
+</html>

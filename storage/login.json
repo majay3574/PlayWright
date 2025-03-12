@@ -1,0 +1,384 @@
+{
+  "cookies": [
+    {
+      "name": "RISKMINDER_COOKIE",
+      "value": "FqSi8w+S2hHuuhf/pPxI7M+LWB4hbVNbnVt+8qeLfjrmX/NVAXqyR1+I5mve+IEK",
+      "domain": "digital-sit.standardbank.co.za",
+      "path": "/sbsa",
+      "expires": 1754725750,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "cdN6VU4pnPtQMCmRfc_ige2jO_raPWFUgthtWqlzH.Q-1739173692-1.0.1.1-_0VPVQ2DXmjrgdbuD_FytKf0yylIDXyBZiRExHiu_g60dVhyPs6A.Qf31Kf.oFP9SCJ1X5z8lwg9p6lMzPRR7w",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1739175493.17403,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "demdex",
+      "value": "51861152943671409704337585314646405625",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1754725699.36257,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCVS_34B834FA53DF7E010A490D44%40AdobeOrg",
+      "value": "1",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "everest_g_v2",
+      "value": "g_surferid~Z6mvQgAAAJOv-wN8",
+      "domain": ".everesttech.net",
+      "path": "/",
+      "expires": 1770709699.265205,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dpm",
+      "value": "51861152943671409704337585314646405625",
+      "domain": ".dpm.demdex.net",
+      "path": "/",
+      "expires": 1754725699.362414,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCV_34B834FA53DF7E010A490D44%40AdobeOrg",
+      "value": "179643557%7CMCIDTS%7C20130%7CMCMID%7C51844168909799241014339294171848164630%7CMCAAMLH-1739778498%7C12%7CMCAAMB-1739778498%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1739180898s%7CNONE%7CMCSYNCSOP%7C411-20137%7CvVersion%7C5.5.0",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1773733699.450536,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_vnum",
+      "value": "1740767400603%26vn%3D1",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1740767400,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_invisit",
+      "value": "true",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1739175551,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_cc",
+      "value": "true",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dextp",
+      "value": "1083-1-1739173698978|1085-1-1739173699089|1086-1-1739173699198|1087-1-1739173699305|1088-1-1739173699411|19913-1-1739173699519|83349-1-1739173699629",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1754725699,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ev_sync_yh",
+      "value": "20250210",
+      "domain": ".everesttech.net",
+      "path": "/",
+      "expires": 1741852100.243423,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "at_check",
+      "value": "true",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_sfid_2bd2",
+      "value": "{%22anonymousId%22:%22fc93f1d1ad7ea29e%22}",
+      "domain": ".enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": 1773733712.707515,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_evga_7196",
+      "value": "{%22uuid%22:%22fc93f1d1ad7ea29e%22}",
+      "domain": "enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": 1773733712.709705,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__gdic",
+      "value": "m6yr4casp6uaftvkdgj",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1773733706.309643,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "___r363765",
+      "value": "0.6916163402696",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1773733706.54724,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "g__gdic",
+      "value": "m6yr4casp6uaftvkdgj",
+      "domain": ".advanced-web-analytics.com",
+      "path": "/",
+      "expires": 1773733714.058558,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "eh",
+      "value": "52379e02f6baae7197e568621c6048e0ec20f4b3fd1d9c3c84a98e5f3251e75c",
+      "domain": ".enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bg",
+      "value": "EFE93164A4191EDCBBC57A494DE38D42",
+      "domain": ".enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "adm",
+      "value": "205515ff-a9a8-4a49-a252-c6a8c9429d19",
+      "domain": ".enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mbox",
+      "value": "session#2c797d7b0edf41fc9cb575f72494db51#1739175573|PC#2c797d7b0edf41fc9cb575f72494db51.41_0#1802418513",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1773733712.692148,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSESSION_363765",
+      "value": "eyJpIjoiZkxxUXg3eEtsTjY4c25vcktYbEZ4Zz09IiwiZSI6InF3VGJpek8rYktJaVhRazViY09BaGQ3MXZpU3BDRERDR1BkeTJqQU5IcW9zMGtiYXJURE5LQU9tTFhPTlRBMHVBXC9NXC9TWUpkVmp0Wk9QMFc0XC9wS1VWS1MrUUhzXC9BdmdRUm5qZnpwRUhrdG5GaUJ5WDVaenJpYlFaaCs1eHBGMUVoa1RFK2JhRVFvQ2p5d3JKYk1VS0E9PSJ9.037878b0e779c14e.MzVkYWI4MjUxNmQ1NzhhOWM2NTMyNTZkYWMxM2MzNzdlYzhkMjFmYmNjMDUyNjJhM2FlNmY1ZDJlMDI5MDIyZg%3D%3D",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "PF",
+      "value": "EmZrq7NmKFfsj20NXhk62zdQrGLGdPXizRGtMUoKRDJ3",
+      "domain": "enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": 1739175526.870482,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "PF.PERSISTENT",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..xM1Vm3cJ7LNKok808dSETQ.1oRZL-mweEdutGsXenvBMTG9hw5idRJU0E1p_8jlPJ9n9lTk7gTwTFeLgZKTiWQ8xcpR3p2negkyLCeK_-lt9S8qHUEnOzd3CToUuEXkqaVZVHfPx_ZDw8QvoR4lGJmf.ef9ur4dZE8yH54LQf2wCnQ",
+      "domain": "enterprisestssit.standardbank.co.za",
+      "path": "/",
+      "expires": 1773733726.870777,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AWSALBTGCORS",
+      "value": "HFSJs/mFufheDT04yDy3zubVtsYI+PXa9DRQ6waQrZ2D85AqME+Fjs7etEV1jP+U70YHTmijf7fnglN41sSp2Cba9091HlHeckzdSUpfETfo63+DGnkwZn9kMd+tsmERfTgYNNDYaAoehEVYW4EB68WGh2cgQ6xVkWC7w47BTv/+qEm7FYg=",
+      "domain": "standardbank.germany-2.evergage.com",
+      "path": "/",
+      "expires": 1739778527.493184,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "login_auth",
+      "value": "1739174031963",
+      "domain": "digital-sit.standardbank.co.za",
+      "path": "/",
+      "expires": 1739174031,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "XSRF-TOKEN",
+      "value": "af689b4d-d236-4d43-816a-888ce09e5092",
+      "domain": "digital-sit.standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Authorization",
+      "value": "eyJraWQiOiJleHQtZW5jLWtleS1pZCIsImN0eSI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJkaXIifQ..qPdhHg4X-xAeX_xM.IA9KEIIkfz8iZRBUutzSFqmkLx-KjfTmXxigHL_LvvIjFfFHgX9xbOXeeu6ER0VJaMkoi5cGjB06iXhYpNlIPckxhrc2aOdGIyusSu5LRa9Z20hJevD8aCnbRZkfNLuUzKIDfBLNzbGK1wSZ7beuXTMdPIpEmDUnPkA1xFHh0LKgSApeD2TSFJBGAyNvvqKuZ-oJyeRH38m-SPVg1_KgJK9FdRTQPPA9RlobRijdwByYLQiVi9OU-eYVhKwKQU1oGm5HTU_UaqTbE3PINBDTKGp0DI7vklyizCaEFqIPVxYbqx2caSgSYJXnrYtYmObn3-a3J5OCswCaSjQCip1MULwV1IgpGfF1AMUmeq-EAPd5ae8J7AKle24D_JKwgIxMLq8_L7icRZMylk6ovSwdbMkW7pS4K_epu9QK1qoIZ-86QLXGyzH7HFEAk7062J4o1Nil3V-J7-q_lxtBcuXTG1PKXB04zCQegcoV3eHj9Guh0vZ9ibIducUgQEjhtXb1n29Gp6-NDyUYlZ4pdy3bHL13FYGkOFR-B5KKOOhSsR-QLiPVKcLwEVUfvacbRAcdvlL57pPwepdou_C6WVHZMysobqBF2IIpzbO2K3lqMVenpzVmHcZsA9cIZ4tlO2hNZLSgXi6uvphvjuzvWiXwtPWTND1h_bUYlGBnnAjGS4Ev5t5lr7GuAlTcwdUFfwsrviK8iLrHUZaYH6UqobM4g40Wc1u80g3mFONwP3XhiYCfmO91rYMH7VEBZ2hQ9ANrKcWI8I6zUngImYKZIdi2Fe7-z-Jnyc-cgXPOe9kM6nQcja4QxSMC8n2PzRR0l84rc9AX.A_tPJCfAxCd6rMonJDb6Bg",
+      "domain": "digital-sit.standardbank.co.za",
+      "path": "/",
+      "expires": 1739174050.584088,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "gpv_pn",
+      "value": "SE%20%7C%20landing%3Aselect%20context",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1739175551,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_nr",
+      "value": "1739173751080-New",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": 1741765751,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_sq",
+      "value": "%5B%5BB%5D%5D",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_ppvl",
+      "value": "landing%253Alogin%253Fcode%253D0zgdhfksy4hgw7eoiuxugk1umbmnwvvkbqwaaaac%2526state%253Diowjk6a0gmicz4rkwaxca3danlzhryno%2C100%2C100%2C593%2C1280%2C593%2C1280%2C720%2C1.5%2CP",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_ppv",
+      "value": "landing%253Aselect%2520context%2C100%2C100%2C593%2C1280%2C593%2C1280%2C720%2C1.5%2CP",
+      "domain": ".standardbank.co.za",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://digital-sit.standardbank.co.za",
+      "localStorage": [
+        {
+          "name": "RISKMINDER_DEVICE_ID",
+          "value": "FqSi8w+S2hHuuhf/pPxI7M+LWB4hbVNbnVt+8qeLfjrmX/NVAXqyR1+I5mve+IEK"
+        },
+        {
+          "name": "com.adobe.reactor.dataElements.adobeCloudVisitorID",
+          "value": "\"51844168909799241014339294171848164630\""
+        }
+      ]
+    },
+    {
+      "origin": "https://enterprisestssit.standardbank.co.za",
+      "localStorage": [
+        {
+          "name": "tgt:tlm:1",
+          "value": "{\"execution\":70.8,\"parsing\":0,\"request\":{\"responseSize\":358},\"telemetryServerToken\":\"cJWuCgDiaU1IgPqDGhBbFI+FW9kSR0NCAmGiqI0dyRo=\",\"mode\":\"edge\",\"features\":{\"executePageLoad\":true,\"prefetchViewCount\":1,\"decisioningMethod\":\"server-side\"},\"requestId\":\"52a37ae3999a46de836b373f92a17052\",\"timestamp\":1739173712677}"
+        },
+        {
+          "name": "tgt:tlm:lower",
+          "value": "-1"
+        },
+        {
+          "name": "com.adobe.reactor.dataElements.adobeCloudVisitorID",
+          "value": "\"51844168909799241014339294171848164630\""
+        },
+        {
+          "name": "tgt:tlm:0",
+          "value": "{\"execution\":175.1,\"parsing\":0.1,\"request\":{\"responseSize\":358},\"telemetryServerToken\":\"O+wkpwcQuMlT6XOFH/MlQi6y79sJUtFdS9Gj+cZvXfQ=\",\"mode\":\"edge\",\"features\":{\"executePageLoad\":true,\"prefetchViewCount\":1,\"decisioningMethod\":\"server-side\"},\"requestId\":\"d3b62c7d1bfa4237865217ecf22bab88\",\"timestamp\":1739173705269}"
+        },
+        {
+          "name": "tgt:tlm:upper",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

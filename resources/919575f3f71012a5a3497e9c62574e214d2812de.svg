@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 21</title>
+    <defs>
+        <linearGradient x1="33.5532007%" y1="0%" x2="66.2931315%" y2="99.5328336%" id="linearGradient-1">
+            <stop stop-color="#536479" offset="0%"></stop>
+            <stop stop-color="#0A2240" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="39.6694215%" x2="99.5328336%" y2="60.2340565%" id="linearGradient-2">
+            <stop stop-color="#35D79A" offset="0%"></stop>
+            <stop stop-color="#00AD6C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Business-banking-icons-and-illustrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Android/iOS-" transform="translate(-1465.000000, -117.000000)">
+            <g id="Group-21" transform="translate(1465.000000, 117.000000)">
+                <rect id="Rectangle" x="0" y="0" width="100" height="100"></rect>
+                <g id="Group-19" transform="translate(8.000000, 10.000000)">
+                    <g id="Group">
+                        <path d="M38.75,79 L6.25,79 C2.79875,79 0,75.9503276 0,72.1896552 L0,6.81034483 C0,3.04967241 2.79875,0 6.25,0 L38.75,0 C42.20125,0 45,3.04967241 45,6.81034483 L45,72.1896552 C45,75.9503276 42.20125,79 38.75,79 Z" id="Path" fill="#858D9D"></path>
+                        <rect id="Rectangle" fill="#C0C6D0" x="17" y="74" width="12" height="2" rx="1"></rect>
+                        <path d="M38.1,71 L6.9,71 C4.7459,71 3,68.7725854 3,66.0243902 L3,7.97560976 C3,5.22741463 4.7459,3 6.9,3 L38.1,3 C40.2541,3 42,5.22741463 42,7.97560976 L42,66.0243902 C42,68.7725854 40.2541,71 38.1,71 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                    </g>
+                    <g id="Group-18" transform="translate(12.000000, 20.000000)">
+                        <path d="M71.2903226,4.86967742 L71.2903226,33.5174194 C71.2903226,36.208172 69.1636774,38.3870968 66.5211097,38.3870968 L4.7692129,38.3870968 C2.12664516,38.3870968 0,36.208172 0,33.5174194 L0,4.86967742 C0,2.17892473 2.12664516,0 4.7692129,0 L66.5211097,0 C69.1636774,0 71.2903226,2.17892473 71.2903226,4.86967742 Z" id="Path" fill="#00AD6C"></path>
+                        <path d="M62.6728111,32.9032258 L8.61751152,32.9032258 C6.88617512,32.9032258 5.48387097,31.3533107 5.48387097,29.4397284 L5.48387097,8.94736842 C5.48387097,7.03378608 6.88617512,5.48387097 8.61751152,5.48387097 L62.6728111,5.48387097 C64.4041475,5.48387097 65.8064516,7.03378608 65.8064516,8.94736842 L65.8064516,29.4397284 C65.8064516,31.3533107 64.4041475,32.9032258 62.6728111,32.9032258 Z" id="Path" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                        <circle id="Oval" fill="#00AD6C" cx="35.6451613" cy="19.1935484" r="8.22580645"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
