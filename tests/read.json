@@ -1,0 +1,13 @@
+{
+  "data": {
+    "title": {
+      "name": "Ajay Michael",
+      "role": "Junior SDET",
+      "skills": [
+        "Playwright",
+        "Selenium",
+        "API Testing"
+      ]
+    }
+  }
+}
