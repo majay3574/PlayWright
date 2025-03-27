@@ -125,7 +125,11 @@ function characterCountMap(str: string): Map<string, number> {
 
     return charMap;
 }
-
-// Test the function
 const result = characterCountMap("hello world");
 console.log(result);
+
+
+function countNumberOccurrences(arr: number[], target: number): number {
+    return arr.filter(num => num === target).length;
+}
+console.log(countNumberOccurrences([1, 2, 3, 4, 2, 2, 5], 2)); 
