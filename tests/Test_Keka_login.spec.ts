@@ -12,7 +12,15 @@ test(`using persistentContext`, async () => {
     await page.goto("https://qeagle.keka.com/#/home/dashboard");
     await page.waitForLoadState('networkidle');
 
+    const shadowHost = page.locator('cat-table-cell[id^="connected-asset-label-"]');
+    const shadowElement = shadowHost.locator('text="Total Assets"');
+    await shadowElement.click()
 
+const textContent = await shadowElement.textContent();
+console.log(textContent);
+
+  
+    
     const allPages = context.pages();
     console.log(`Total open pages: ${allPages.length}`);
     for (const p of allPages) {
