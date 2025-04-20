@@ -1,77 +1,75 @@
-import { chromium, test } from '@playwright/test';
-import fetch from 'node-fetch';
+import { test, expect } from '@playwright/test';
 
-test(`brokenLink`, async ({ page }) => {
+const selectors = {
+  image: 'img[data-csiid="Afz9Z-CeM6XN1e8P8LfJyAM_2"]',
+  searchBox: '//textarea[@id="APjFqb"]',
+  trendingSearches: '//div[normalize-space(text())="Trending searches"]',
+};
 
-    await page.goto('http://www.deadlinkcity.com/');
-    await page.waitForLoadState('load');
+class GoogleSearchPage {
+  page: any;
 
-    const links = await page.$$eval('a', anchors => anchors.map(anchor => anchor.href));
-    console.log("Total number of links:", links.length); // Output the total number of links
+  constructor(page: any) {
+    this.page = page;
+  }
 
-    let brokenLinks = 0;
-
-    for (const link of links) {
-        if (!link) {
-            console.log(link)
-
-            // Use dynamic import to import node-fetch
-            const fetch = await import('node-fetch');
-
-            test(`brokenLink`, async ({ page }) => { // Added browser parameter      
-
-                await page.goto('http://www.deadlinkcity.com/');
-                await page.waitForLoadState('load');
-                await page.setViewportSize({ width: 1280, height: 720 });
-
-                const links = await page.$$eval('a', anchors => anchors.map(anchor => anchor.href));
-                console.log("Total number of links:", links.length); // Output the total number of links
-
-                let brokenLinks = 0;
-
-                for (const link of links) {
-                    if (!link) {
-                        console.log("href attribute value is empty.");
-                        continue;
-                    }
-
-                    try {
-                        const response = await fetch.default(link); // Use fetch.default() to access the fetch function
-                        if (response.status >= 400) {
-                            console.log(`${link} ===> Broken Link`);
-                            brokenLinks++;
-                        } else {
-                            console.log(`${link} ===> Not Broken Link`);
-                        }
-                    } catch (error) {
-                        console.log(`${link} ===> Broken Link`);
-                        brokenLinks++;
-                    }
-                }
-
-                console.log("Total number of broken links:", brokenLinks);
-
-                await page.context().close(); // Use page.context().close() instead of browser.close()
-            });
-            ("href attribute value is empty.");
-            continue;
-        }
-
-        try {
-            const response = await fetch(link);
-            if (response.status >= 400) {
-                console.log(`${link} ===> Broken Link`);
-                brokenLinks++;
-            } else {
-                console.log(`${link} ===> Not Broken Link`);
-            }
-        } catch (error) {
-            console.log(`${link} ===> Broken Link`);
-            brokenLinks++;
-        }
+  public async clickImage() {
+    try {
+      await this.page.waitForSelector(selectors.image, { timeout: 5000 });
+      await this.validateElementVisibility(selectors.image, 'Image');
+      await this.click(selectors.image, 'Image', 'Click');
+    } catch (error) {
+      console.error('Error clicking image:', error);
+      throw error;
     }
+  }
 
-    console.log("Total number of broken links:", brokenLinks);
+  public async fillSearchBox(text: string) {
+    try {
+      await this.page.waitForSelector(selectors.searchBox, { timeout: 5000 });
+      await this.validateElementVisibility(selectors.searchBox, 'Search Box');
+      await this.page.fill(selectors.searchBox, text);
+    } catch (error) {
+      console.error('Error filling search box:', error);
+      throw error;
+    }
+  }
 
-    await page.close(); // Use browser.close() instead of page.close()
+  public async clickTrendingSearches() {
+    try {
+      await this.page.waitForSelector(selectors.trendingSearches, { timeout: 5000 });
+      await this.validateElementVisibility(selectors.trendingSearches, 'Trending Searches');
+      await this.click(selectors.trendingSearches, 'Trending Searches', 'Click');
+    } catch (error) {
+      console.error('Error clicking Trending Searches:', error);
+      throw error;
+    }
+  }
+
+  private async validateElementVisibility(selector: string, elementName: string) {
+    await expect(this.page.locator(selector)).toBeVisible({ timeout: 2000 });
+    console.log(`${elementName} is visible`);
+  }
+
+
+  private async click(selector: string, label: string, type: string) {
+    await this.page.click(selector);
+    console.log(`Clicked ${label} (${type})`);
+  }
+}
+
+
+test.beforeEach(async ({ page }) => {
+  await page.goto('https://example.com');
+});
+
+test.afterEach(async ({ page }) => {
+  await page.close();
+});
+
+test('Google Search Test', async ({ page }) => {
+  const googleSearchPage = new GoogleSearchPage(page);
+  await googleSearchPage.clickImage();
+  await googleSearchPage.fillSearchBox('Playwright');
+  await googleSearchPage.clickTrendingSearches();
 });

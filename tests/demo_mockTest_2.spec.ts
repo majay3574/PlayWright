@@ -40,6 +40,6 @@ test("mocks a test call to API", async ({ page }) => {
   if (await textElement.isVisible()) {
     await expect(textElement).toBeVisible({ timeout: 20000 });
   } else {
-    console.log('Text element not found');
+    console.log('Text element not found');    
   }
 });

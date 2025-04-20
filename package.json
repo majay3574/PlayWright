@@ -29,11 +29,14 @@
     "exceljs": "^4.4.0",
     "faker": "^5.5.3",
     "fs": "^0.0.1-security",
+    "jimp": "^1.6.0",
+    "js-levenshtein": "^1.1.6",
     "mysql2": "^3.11.3",
     "mysql2-promise": "^0.1.4",
     "node-fetch": "^3.3.2",
     "qrcode": "^1.5.3",
     "redis": "^4.6.13",
+    "tesseract.ts": "^1.1.2",
     "typescript": "^5.3.3",
     "xlsx": "^0.18.5"
   }

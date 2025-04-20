@@ -70,18 +70,17 @@ console.log(removeDuplicates("Hi Ajay Michael"));
 let n1 = [1, 2, 3, 4, 5, 6,];
 let n2 = [3, 4, 5, 6, 7, 8, 9]
 
-let n3 = []
+let n3:number[] = []
 
-for (let i = 0; i < num1.length; i++) {
-  for (let j = 0; j < num2.length; j++) {
-    if (num1[i] == num2[j]) {
-      num3.push(num1[i])
+for (let i = 0; i < n1.length; i++) {
+  for (let j = 0; j < n2.length; j++) {
+    if (n1[i] == n2[j]) {
+      n3.push(n1[i])
       break;
     }
-
   }
 }
-console.log(num3);
+console.log(n3);
 
 //Armstrong Number
 

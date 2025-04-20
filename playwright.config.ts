@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-
+//import CustomHTMLReporter from './reporter/custom-report';
 export default defineConfig({
   testDir: './tests',
 
@@ -8,7 +8,7 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  repeatEach:1,
+  repeatEach: 1,
   retries: 0,
   workers: 5,
   timeout: 120000,
@@ -16,7 +16,7 @@ export default defineConfig({
     timeout: 10000
   },
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [ ['./reporter/custom-report.ts']],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -28,7 +28,7 @@ export default defineConfig({
     video: 'on',
     screenshot: 'on',
     headless: true,
-   // storageState:"storage/login.json"
+    // storageState:"storage/login.json"
 
   },
 
