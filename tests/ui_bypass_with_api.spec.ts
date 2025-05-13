@@ -56,8 +56,9 @@ test('ui_bypass_with_api', async ({ page }) => {
         // Creating URL encoded form data with username and password
         const formData = new URLSearchParams();
         formData.append('un', 'majay3574@gmail.com');
-        formData.append('pw', 'Ajaymichael@007');
-
+        formData.append('pw', 'Ajaymichael@321');
+        
+expect().toMatchSnapshot()
         // Continuing the intercepted request with modified login credentials
         await route.continue({
             method: 'POST', // Sending the request as a POST request

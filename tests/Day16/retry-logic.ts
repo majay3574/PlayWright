@@ -1,11 +1,11 @@
 import { test as baseTest} from '@playwright/test';
 
-declare module '@playwright/test' {
+/* declare module '@playwright/test' {
 interface Page {
         delayedFill: (selector: string, value: string) => Promise<void>;
         clickAndDelay: (selector: string) => Promise<void>;
     }
-}
+} */
 
 export const test = baseTest.extend({
     page:async ({page}, use, testInfo) => {

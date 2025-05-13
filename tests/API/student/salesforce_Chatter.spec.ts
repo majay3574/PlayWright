@@ -1,7 +1,7 @@
 
 import { test, expect } from "@playwright/test"
 import { log } from "console";
-
+ //export const savebtn = "//button[text()='Save']"
 test.only(`Creating a new dashboard`, async ({ page }) => {
     test.slow()
     await page.goto("https://login.salesforce.com");

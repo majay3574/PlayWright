@@ -10,7 +10,6 @@ test(`using persistentContext`, async () => {
     const page = await context.newPage();
 
     await page.goto("https://qeagle.keka.com/#/home/dashboard");
-    await page.waitForLoadState('networkidle');
 
 
     const allPages = context.pages();
@@ -24,6 +23,8 @@ test(`using persistentContext`, async () => {
         }
     }
     let clockOut = page.locator("//button[text()='Clock-out']");
+    await page.locator("//button[text()='View All']").waitFor();
+
 
     if (await clockOut.isVisible()) {
         await clockOut.click({ force: true });
