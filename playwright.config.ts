@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import os from 'os';
 //import CustomHTMLReporter from './reporter/custom-report';
 export default defineConfig({
   testDir: './tests',
@@ -8,14 +9,28 @@ export default defineConfig({
   repeatEach: 0,
   retries: 0,
   workers: 1,
-  timeout: 10000,
+  timeout: 120 * 10000,
   expect: {
     timeout: 10000
   },
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: [ ['./reporter/custom-Freport.ts']],
-  reporter: [["allure-playwright"]],
+  reporter: [['html', {
+    open: 'always',
+    outputFolder: 'playwright-report'
+  }],
+  // ['list'],
+  // [process.env.CI ? 'github' : 'list'],
+  ['blob', { outputFile: `./blob-report/report-${os.platform()}.zip` }],
+  ['allure-playwright', {
+    detail: true,
+    outputFolder: 'allure-results',
+    suiteTitle: false
+  }],
+  ['playwright-ctrf-json-reporter', {
+    outputFile: 'test-results/ctrf-results.json'
+  }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -40,7 +55,7 @@ export default defineConfig({
         viewport: null,
         launchOptions: {
           slowMo: 300,
-          args: ["--start-maximized", "--disable-web-security", "--disable-features=IsolateOrigins,site-per-process", '--no-proxy-server']
+          args: ["--start-maximized"]
 
         }
 

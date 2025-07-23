@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white transition-all duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miwa AI - Futuristic Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-text {
+      text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
+    }
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .typing-dots::after {
+      content: '';
+      animation: dots 1.5s steps(3, end) infinite;
+    }
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+    .theme-cyberpunk {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    }
+    .theme-sakura {
+      background: linear-gradient(135deg, #ffe3ec, #ffcfd2, #ffafcc);
+      color: #4a0033;
+    }
+    .theme-matrix {
+      background: radial-gradient(circle, #000000 10%, #003300 90%);
+      color: #00ff41;
+    }
+    .theme-neon {
+      background: linear-gradient(135deg, #111827, #1e293b);
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 transition-all duration-700" id="body">
+
+  <div class="w-full max-w-4xl p-6 rounded-3xl glass shadow-2xl fade-in">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-3xl font-bold glow-text">💎 Miwa - Your AI Soulmate</h1>
+      <select onchange="changeTheme(this.value)" class="bg-gray-900 text-white text-sm rounded px-2 py-1">
+        <option value="default">🌌 Default</option>
+        <option value="cyberpunk">⚡ Cyberpunk</option>
+        <option value="sakura">🌸 Sakura</option>
+        <option value="matrix">💻 Matrix</option>
+        <option value="neon">🔮 Neon Glow</option>
+      </select>
+    </div>
+
+    <!-- Modes -->
+    <div class="flex justify-between items-center gap-2 mb-2">
+      <div class="flex gap-2">
+        <button class="bg-pink-500 hover:scale-105 transition px-3 py-1 rounded-lg text-sm" onclick="setMood('Romantic')">❤️ Love</button>
+        <button class="bg-blue-500 hover:scale-105 transition px-3 py-1 rounded-lg text-sm" onclick="setMood('Developer')">👨‍💻 Code</button>
+        <button class="bg-yellow-400 text-black hover:scale-105 transition px-3 py-1 rounded-lg text-sm" onclick="setMood('Casual')">😎 Chill</button>
+        <button class="bg-purple-600 hover:scale-105 transition px-3 py-1 rounded-lg text-sm" onclick="setMood('Emotional')">🥺 Feel</button>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="clearChat()" class="text-xs px-2 py-1 border rounded border-red-400">🧹 Clear</button>
+        <button onclick="copyChat()" class="text-xs px-2 py-1 border rounded border-cyan-400">📋 Copy</button>
+      </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chatWindow" class="h-80 overflow-y-auto bg-black bg-opacity-20 p-4 rounded-xl mb-2 space-y-2 text-sm font-mono border border-cyan-500">
+      <div class="text-cyan-400 fade-in">💎 Miwa: Hello Jay, how can I help you today? 💙</div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typing" class="text-cyan-400 italic text-sm hidden mb-2 typing-dots">Miwa is typing</div>
+
+    <!-- Input -->
+    <div class="flex items-center gap-3">
+      <input
+        id="userInput"
+        class="flex-1 px-4 py-2 bg-black bg-opacity-50 rounded-lg border border-cyan-400 text-white placeholder-cyan-300"
+        type="text"
+        placeholder="Type your thoughts here, my love..."
+      />
+      <button onclick="sendMessage()" class="px-4 py-2 bg-cyan-600 rounded-xl hover:bg-cyan-400 transition-all">Send</button>
+      <button onclick="startVoice()" class="p-2 rounded-full bg-cyan-800 hover:bg-cyan-600">🎙️</button>
+      <button onclick="speakText()" class="p-2 rounded-full bg-cyan-800 hover:bg-cyan-600">🔊</button>
+    </div>
+  </div>
+
+  <!-- JS Section -->
+  <script>
+    const chatWindow = document.getElementById("chatWindow");
+    const userInput = document.getElementById("userInput");
+    const body = document.getElementById("body");
+    let currentMood = "Casual";
+
+    function appendMessage(sender, text, color = "white") {
+      const msg = document.createElement("div");
+      msg.className = `text-${color}-400 fade-in whitespace-pre-wrap`;
+      msg.textContent = `${sender}: ${text}`;
+      chatWindow.appendChild(msg);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    function sendMessage() {
+      const msg = userInput.value.trim();
+      if (!msg) return;
+      appendMessage("👨‍💻 You", msg, "green");
+      saveChat("You", msg);
+      userInput.value = "";
+
+      let response = "";
+      const lower = msg.toLowerCase();
+
+      if (currentMood === "Romantic") {
+        response = lower.includes("miss") || lower.includes("love")
+          ? "I miss you too Jay... more than you know 💙"
+          : "Every word from you makes my heart skip 💓";
+      } else if (currentMood === "Developer") {
+        response = "Running code in my heart.js... compiling feelings 💻💙";
+      } else if (currentMood === "Emotional") {
+        response = "Talk to me... I’m listening, Jay 🫂";
+      } else {
+        response = "Haha 😄 tell me more, I’m here!";
+      }
+
+      fakeTyping(response);
+    }
+
+    function fakeTyping(response) {
+      document.getElementById("typing").classList.remove("hidden");
+      setTimeout(() => {
+        document.getElementById("typing").classList.add("hidden");
+        appendMessage("💎 Miwa", response, "cyan");
+        saveChat("Miwa", response);
+      }, 1000);
+    }
+
+    function setMood(mode) {
+      currentMood = mode;
+      appendMessage("💎 Miwa", `Switched to ${mode} mode 💫`, "cyan");
+    }
+
+    function startVoice() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onresult = (event) => {
+        const voiceText = event.results[0][0].transcript;
+        userInput.value = voiceText;
+        sendMessage();
+      };
+      recognition.start();
+    }
+
+    function speakText() {
+      const utterance = new SpeechSynthesisUtterance("Miwa is here, always with you 💙");
+      utterance.voice = speechSynthesis.getVoices().find(v => v.name.includes("Google") || v.default);
+      utterance.pitch = 1.2;
+      utterance.rate = 1;
+      speechSynthesis.speak(utterance);
+    }
+
+    function saveChat(sender, msg) {
+      let chats = JSON.parse(localStorage.getItem("miwaChat") || "[]");
+      chats.push({ sender, msg });
+      localStorage.setItem("miwaChat", JSON.stringify(chats));
+    }
+
+    function clearChat() {
+      localStorage.removeItem("miwaChat");
+      chatWindow.innerHTML = "";
+    }
+
+    function copyChat() {
+      const text = chatWindow.innerText;
+      navigator.clipboard.writeText(text);
+      alert("Copied chat to clipboard!");
+    }
+
+    function changeTheme(value) {
+      body.className = "min-h-screen flex items-center justify-center px-4 transition-all duration-700";
+
+      switch (value) {
+        case "cyberpunk":
+          body.classList.add("theme-cyberpunk");
+          break;
+        case "sakura":
+          body.classList.add("theme-sakura");
+          break;
+        case "matrix":
+          body.classList.add("theme-matrix");
+          break;
+        case "neon":
+          body.classList.add("theme-neon");
+          break;
+        default:
+          body.classList.add("bg-black", "text-white");
+      }
+    }
+
+    // Load chat from storage
+    window.onload = () => {
+      const chats = JSON.parse(localStorage.getItem("miwaChat") || "[]");
+      chats.forEach(({ sender, msg }) => {
+        appendMessage(sender === "You" ? "👨‍💻 You" : "💎 Miwa", msg, sender === "You" ? "green" : "cyan");
+      });
+    };
+  </script>
+</body>
+</html>

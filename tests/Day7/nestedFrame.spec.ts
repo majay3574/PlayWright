@@ -14,6 +14,6 @@ test('Handling Nested Frames', async ({ page }) => {
 
   await page.goto("https://www.leafground.com/frame.xhtml");
   const frame=page.frame({url:"https://www.leafground.com/page.xhtml"});
-  const nestedframe= frame!.frameLocator('#frame2').locator("button#Click")
-  await nestedframe!.click({force:true})
+  const nestedframe= frame?.frameLocator('#frame2').locator("button#Click")
+  await nestedframe?.click({force:true})
 });

@@ -19,10 +19,7 @@ test(`Testing multiple window open`, async ({ page, context }) => {
     await page.getByText("Open with delay", { exact: true }).click()
     const window = await windowPromise
     await expect(window).toHaveURL("https://www.leafground.com/dashboard.xhtml")
-
     await window.bringToFront()
-
-
 
 })
 

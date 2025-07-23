@@ -24,3 +24,5 @@ for (let i = 0; i < num2.length - 1; i++) {
 }
 
 console.log("Duplicate elements:", duplicates);
+
+moveHere()

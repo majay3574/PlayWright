@@ -20,7 +20,7 @@ reverse("Ajay Michael"); // Output: "yaJ"
 let fnamed = fname.split('').reverse().join('');
 console.log(fnamed);
 
-
+/* 
 function rev(actualName){
     let name=""
     for(let i =actualName.length -1;i>=0;i--){
@@ -30,7 +30,7 @@ function rev(actualName){
     }
     console.log(name);
 }
-rev("Ajay Michael")
+rev("Ajay Michael") */
 
 /* name += actualName[i]; is equivalent to name = name + actualName[i];. It takes the current value of name, 
 appends the character at index i of actualName, and assigns the result back to name. This process repeats

@@ -4,11 +4,10 @@ import { log } from "console";
 
 test(`handling alert`, async ({ page, context }) => {
     page.goto("http://leafground.com/window.xhtml");
-    const [multiPage] = await Promise.all([
-        context.waitForEvent("page"),
-        page.getByText("Open Multiple", { exact: true }).click()
-    ])
-    // no of pages getting opened
+    const [multiPage] = await Promise.all([  context.waitForEvent('page'), page.getByText("Open Multiple", { exact: true }).click() ])
+    console.log(multiPage);
+
+    /* // no of pages getting opened
     const pages = multiPage.context().pages();
     console.log(`No of pages opened: ${pages.length}`);
     pages.forEach(tabs => {
@@ -27,5 +26,5 @@ test(`handling alert`, async ({ page, context }) => {
         //console.log(webPage)
     }
     await webPage.fill("input[placeholder='Search']", "Amy Elsner");
-    await webPage.waitForTimeout(5000);
+    await webPage.waitForTimeout(5000); */
 })

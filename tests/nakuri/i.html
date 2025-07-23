@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Post Launcher</title>
+  <style>
+    body {
+      background: #001a12;
+      color: #00ff99;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #00c676;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Launch LinkedIn Post</h1>
+  <button onclick="launchLinkedIn()">Open Post</button>
+
+  <script>
+    function launchLinkedIn() {
+      const url = "https://www.linkedin.com/posts/ksrujanbabu_hi-all-we-have-requirement-for-below-skillset-activity-7346039728800002048-kjBQ";
+      window.open(url, "_blank");
+
+      // Show instruction in current tab
+      alert(`✅ LinkedIn post opened in new tab.
+
+To scrape article content:
+1. Right-click in the new tab → Inspect → Console
+2. Paste the following code:
+
+const articles = document.querySelectorAll("article");
+const texts = [...articles].map(el => el.innerText.trim());
+console.log("✅ Extracted Article Texts:", texts);
+
+⚠️ Note: You must be logged into LinkedIn to view post content.
+`);
+    }
+  </script>
+</body>
+</html>

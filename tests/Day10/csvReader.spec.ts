@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 
-const records = parse(fs.readFileSync(path.join(__dirname, '../../data/login.csv')),
+const records = parse(fs.readFileSync(path.join(__dirname, `../../data/login.csv`)),
     {
         columns: true,
         skip_empty_lines: true
@@ -21,4 +21,7 @@ for (const record of records) {
         await page.waitForTimeout(6000)
         // await expect(page).toHaveTitle("Home | Salesforce");
     })
+    records.forEach(element => {
+        console.log(element.testcase)
+    });
 } 

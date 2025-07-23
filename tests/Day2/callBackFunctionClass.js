@@ -1,14 +1,15 @@
-function getUserData(a) {
+function getUserData(a) {  //--> get User FUnction
     setTimeout(() => {
-        const user = {
+        /* const user = {
             name: "John Doe",
             age: 30
-        };
-        a(user)
-         callback(user);
+        }; */
+        let fname = "Diviya"
+        a(fname)
+        callback(fname);
     }, 3000);
 }
 
-getUserData(function(user) {
+getUserData(function (user) {
     console.log(`User's name is ${user.name} and age is ${user.age}`);
 });
