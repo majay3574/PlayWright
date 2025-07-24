@@ -84,7 +84,7 @@ test('frame test', async ({ page }) => {
 
     await page.waitForLoadState('load')
     const form = await findElementInAllFrames(page, "//div[text()='Form Filling Demo Page']");
-    let verificationText = await form!.innerText();
+    let verificationText = await form?.innerText();
     console.log(verificationText);
-    expect(verificationText.toString()).toContain("Form Filling Demo Page");
+    expect(verificationText?.toString()).toContain("Form Filling Demo Page");
 })
