@@ -27,9 +27,6 @@ export default defineConfig({
     detail: true,
     outputFolder: 'allure-results',
     suiteTitle: false
-  }],
-  ['playwright-ctrf-json-reporter', {
-    outputFile: 'test-results/ctrf-results.json'
   }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

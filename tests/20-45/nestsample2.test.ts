@@ -25,7 +25,7 @@ test('frame test', async ({ page }) => {
             try {
                 const element = frame.locator(selector);
                 if (await element.count() > 0) {
-                    await element.first().waitFor({ timeout, state: 'attached' });
+                    await element.first().waitFor({ timeout, state: 'visible'});
                     return element.first();
                 }
             } catch (e) {
@@ -87,4 +87,10 @@ test('frame test', async ({ page }) => {
     let verificationText = await form?.innerText();
     console.log(verificationText);
     expect(verificationText?.toString()).toContain("Form Filling Demo Page");
+})
+
+test.skip(`test2`, async ({page}) => {
+    await page.goto("https://www.leafground.com/frame.xhtml")
+    await page.click("//a[text()='Iframe with in an Iframe']")
+
 })
