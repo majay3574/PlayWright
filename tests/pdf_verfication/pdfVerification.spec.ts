@@ -11,7 +11,7 @@ function normalizeText(text: string) {
 
 test(`PDF verification`, async ({ page }) => {
     // Define path for saving the generated PDF
-    const pdfPath = path.join(__dirname, "tests/pdf_verfication/newPDF.pdf");
+    const pdfPath = path.join(__dirname, "./newPDF.pdf");
 
     // Ensure the directory exists before writing the PDF
     fs.mkdirSync(path.dirname(pdfPath), { recursive: true });
